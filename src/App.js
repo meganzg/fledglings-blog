@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+
+/* main "app" thing*/
+/**/
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  /*import router to create one*/
+import Header from './components/Header'; /*import components*/
+import Navigation from './components/Navigation';
+//import FeaturedPost from './components/FeaturedPost';
+import Home from './pages/Home'; /*import the pages in the app*/
+import Read from './pages/Read';
+import Submit from './pages/Submit';
+import About from './pages/About';
+import Contact from './pages/Contact';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router> {/*create router thing*/}
+      <div className="App">
+        <Header /> {/*components*/}
+        <Navigation />
+        <main>
+          <Routes> {/*container for all route definitions*/}
+            <Route path="/" element={<Home />} /> {/*when URL is "/", show Home Component*/}
+            <Route path="/read" element={<Read />} /> {/*Route path is URL that will trigger this route*/}
+            <Route path="/submit" element={<Submit />} /> {/*element is component to display when path matches*/}
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,42 @@
+.featured-post {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.featured-label {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.featured-content h2 {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .author {
+    color: #666;
+    font-style: italic;
+  }
+  
+  .excerpt {
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+  
+  .read-more {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    /*font-weight: bold;*/
+    font-size: 0.8rem;
+  }
+  
+  .read-more:hover {
+    color: #666;
+  }
