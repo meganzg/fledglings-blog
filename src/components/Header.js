@@ -9,9 +9,7 @@ function Header(){
     if (location.pathname === '/')
         return (
             <header>
-                <Link to="/" className="site-title">
-                    <h1 className="header">Fledglings</h1>
-                </Link>
+                <h1 className="header">Fledglings</h1>
             </header>
         );
 

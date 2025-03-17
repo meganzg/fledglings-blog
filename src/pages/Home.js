@@ -9,8 +9,8 @@ function Home(){
 
     return (
         <div className="home">
-            <section classNmae="intro">
-                <p classNmae="welcome-text">
+            <section className="intro">
+                <p className="welcome-text">
                 Welcome to Fledglings
                 </p>
             </section>

@@ -10,7 +10,7 @@ function Navigation() {
         <nav className="navigation"> {/*create navigation bar*/}
             <ul>
                 {/*create clickable links that point to route paths defined in App.js*/}  
-                <li><Link to="/Read">Read</Link></li>
+                <li><Link to="/mainread">Read</Link></li>
                 <li><Link to="/Submit">Submit</Link></li>
                 <li><Link to="/About">About</Link></li>
                 <li><Link to="/Contact">Contact</Link></li>
@@ -20,7 +20,7 @@ function Navigation() {
         <nav className="small-navigation"> {/*create navigation bar*/}
             <ul>
                 {/*create clickable links that point to route paths defined in App.js*/}
-            <li><Link to="/Read">Read</Link></li>
+            <li><Link to="/mainread">Read</Link></li>
             <li><Link to="/Submit">Submit</Link></li>
             <li><Link to="/About">About</Link></li>
             <li><Link to="/Contact">Contact</Link></li>

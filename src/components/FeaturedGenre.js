@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import './FeaturedGenre.css'
 
 const PostCard = ({ post }) => {
@@ -7,20 +6,21 @@ const PostCard = ({ post }) => {
     if (!post) return <div className="no-post-message">No featured post available</div>
 
     return (
-        <Card className="h-full">
-            <CardHeader>
-                <CardTitle>{post.title}</CardTitle>
+        <div className="post-box">
+            <div className="post-header">
+                <h3 className="post-title">{post.title}</h3>
                 <div className="post-meta">
-                    by {post.author} | {new Date(post.date).toLocaleDateString()}
+                    by {post.author} {/*| {new Date(post.date).toLocaleDateString()}*/}
                 </div>
-            </CardHeader>
-            <CardContent>
+            </div>
+
+            <div className="post-content">
                 <p className="post-excerpt">{post.excerpt}</p>
-                <button className="read-more-button">
+                <button className="read-more">
                     read more
                 </button>
-            </CardContent>
-        </Card>
+            </div>
+        </div>
     );
 };
 
@@ -32,20 +32,23 @@ const ReadPage = ({ posts }) => {
 
     return (
         <div className="read-page-container">
+            <h2 className="featured">Featured</h2>
             <div className="columns-grid"> {/*split into 3 sections*/}
+
+                {/* Create fiction division */}
                 <div className="fiction-column">
-                    <h2>Fiction</h2>
                     <PostCard post = {fictionPost} />
+                    <h2 className="fiction-header">New Fiction</h2>
                 </div>
 
                 <div className="poetry-column">
-                    <h2>Poetry</h2>
                     <PostCard post = {poetryPost} />
+                    <h2 className="poetry-header">New Poetry</h2>
                 </div>
 
                 <div className="nonfiction-column">
-                    <h2>Nonfiction</h2>
                     <PostCard post = {nonfictionPost} />
+                    <h2 className="nonfiction-header">New Nonfiction</h2>
                 </div>
             </div>
         </div>
