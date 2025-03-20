@@ -1,0 +1,18 @@
+.title{
+    font-family: 'Sabon';
+}
+.genre{
+    font-family: 'Sabon';
+}
+.author{
+    font-family: 'Sabon';
+}
+.text{
+    font-family: 'Sabon';
+    white-space: pre-line;
+    text-align: left;
+    margin-left: 456px;
+    margin-top: 50px;
+    line-height: 25px;
+    
+}

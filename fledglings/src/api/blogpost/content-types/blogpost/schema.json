@@ -48,9 +48,9 @@
     "Genre": {
       "type": "enumeration",
       "enum": [
-        "fiction",
-        "poetry",
-        "nonfiction"
+        "FICTION",
+        "POETRY",
+        "NONFICTION"
       ],
       "required": true
     },
@@ -58,6 +58,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::blogpost.blogpost"
+    },
+    "Featured": {
+      "type": "boolean"
     }
   }
 }

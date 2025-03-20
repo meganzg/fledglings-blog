@@ -12,6 +12,8 @@ import MainRead from './pages/MainRead';
 import Submit from './pages/Submit';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Read from './pages/Read';
+import './App.css';
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
             <Route path="/submit" element={<Submit />} /> {/*element is component to display when path matches*/}
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/Read/:documentId" element={<Read />} />
           </Routes>
         </main>
       </div>

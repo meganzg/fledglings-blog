@@ -16,7 +16,7 @@ function Header(){
     return  (
         <header>
             <Link to="/" className="site-title">
-                <h4 className="small-header">fledglings</h4>
+                <p className="small-header">fledglings</p>
             </Link>
         </header>
     );

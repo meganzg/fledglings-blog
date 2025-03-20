@@ -1,6 +1,7 @@
 .navigation {
     background-color: #d2d0d0;
     padding: 1rem;
+    font-family: 'Sabon';
   }
   
   .navigation ul {
@@ -17,7 +18,7 @@
     text-decoration: none;
     font-size: 1.1rem;
   }
-  
+
   .navigation a:hover {
     color: #ddd;
   }
@@ -25,9 +26,12 @@
 .small-navigation {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 200px;
     background-color: transparent;
     z-index: 1000;
+    font-family: 'Sabon';
+    padding: 1rem;
+    background-color: white;
   }
 
   .small-navigation ul {
