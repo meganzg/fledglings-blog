@@ -387,8 +387,11 @@ export interface ApiBlogpostBlogpost extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Date: Schema.Attribute.DateTime & Schema.Attribute.Required;
     Featured: Schema.Attribute.Boolean;
-    Genre: Schema.Attribute.Enumeration<['FICTION', 'POETRY', 'NONFICTION']> &
+    Genre: Schema.Attribute.Enumeration<
+      ['FICTION', 'POETRY', 'NONFICTION', 'ART']
+    > &
       Schema.Attribute.Required;
+    genreFeatured: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -402,6 +405,7 @@ export interface ApiBlogpostBlogpost extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::blogpost.blogpost'
     >;
+    subFeatured: Schema.Attribute.Boolean;
     Text: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{

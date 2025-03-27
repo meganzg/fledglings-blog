@@ -50,7 +50,8 @@
       "enum": [
         "FICTION",
         "POETRY",
-        "NONFICTION"
+        "NONFICTION",
+        "ART"
       ],
       "required": true
     },
@@ -60,6 +61,12 @@
       "target": "api::blogpost.blogpost"
     },
     "Featured": {
+      "type": "boolean"
+    },
+    "subFeatured": {
+      "type": "boolean"
+    },
+    "genreFeatured": {
       "type": "boolean"
     }
   }

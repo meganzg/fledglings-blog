@@ -14,6 +14,10 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Read from './pages/Read';
 import './App.css';
+import Poetry from './pages/Poetry';
+import Art from './pages/Art';
+import Fiction from './pages/Fiction';
+import Nonfiction from './pages/Nonfiction';
 
 
 function App() {
@@ -30,6 +34,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/Read/:documentId" element={<Read />} />
+            <Route path="/fiction" element={<Fiction />} />
+            <Route path="/nonfiction" element={<Nonfiction />} />
+            <Route path="/art" element={<Art />} />
+            <Route path="/poetry" element={<Poetry />} />
           </Routes>
         </main>
       </div>

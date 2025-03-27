@@ -9,7 +9,7 @@ function Header(){
     if (location.pathname === '/')
         return (
             <header>
-                <h1 className="header">Fledglings</h1>
+                <p className="header">FLEDGLINGS</p>
             </header>
         );
 
