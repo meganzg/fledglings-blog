@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './FeaturedPost.css';
+import './Subfeatured.css';
 import useFetch from '../hooks/useFetch'
 
 function Subfeatured({ posts }){
@@ -13,7 +13,8 @@ function Subfeatured({ posts }){
                 <div className="subfeatured-content"> {/*create a featured content division*/}
                 <h2>{subpost.Title}</h2> {/*get the title from the post data*/}
                  <p className="author">By {subpost.Author}</p> {/*show relevant data*/}
-                 <img 
+                 <Link to={`/Read/${subpost.documentId}`} className="read-more-img"> 
+                    <img 
                         src={`http://localhost:1337${subpost.Media.url}`}
                         alt="Blog Post Image" 
                         style={{ 
@@ -22,6 +23,7 @@ function Subfeatured({ posts }){
                         objectFit: 'cover', 
                         }} 
                     />
+                 </Link>
                  <p className="excerpt">{subpost.Text.substring(0, subpost.Text.indexOf(".")) + "."}</p>
                  <Link to={`/Read/${subpost.documentId}`} className="read-more"> 
                  {/*uses react router component to navigate to read page*/}

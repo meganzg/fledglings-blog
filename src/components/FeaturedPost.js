@@ -11,9 +11,13 @@ function FeaturedPost({ post }) {
         <div className="featured-post"> {/*create a featured post division*/}
             <div className="featured-content"> {/*create a featured content division*/}
                 <span className="featured-label">Featured Post</span> {/*create a span for the featured post label*/}
-                <h2>{post.Title}</h2> {/*get the title from the post data*/}
+                <br></br>
+                <Link to={`/Read/${post.documentId}`} className="read-more-title"> 
+                    <h2>{post.Title}</h2>{/*get the title from the post data*/}
+                </Link>
                  <p className="author">By {post.Author}</p> {/*show relevant data*/}
-                 <img 
+                 <Link to={`/Read/${post.documentId}`} className="read-more-img"> 
+                    <img 
                         src={`http://localhost:1337${post.Media.url}`}
                         alt="Blog Post Image" 
                         style={{ 
@@ -22,6 +26,7 @@ function FeaturedPost({ post }) {
                         objectFit: 'cover', 
                         }} 
                     />
+                </Link>
                  <p className="excerpt">{post.Text.substring(0, post.Text.indexOf("\n")) + "..."}</p>
                  <Link to={`/Read/${post.documentId}`} className="read-more"> 
                  {/*uses react router component to navigate to read page*/}
