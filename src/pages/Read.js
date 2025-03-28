@@ -29,7 +29,7 @@ function Read(){
                 }} 
             />
             <p className="text">{post.Text}</p>
-     </div>
+        </div>
     );
     
 }

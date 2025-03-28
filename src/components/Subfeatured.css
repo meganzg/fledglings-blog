@@ -4,7 +4,7 @@
     max-width: 800px;
     background-color: #f8f8f8;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0);
 }
 
 .featured-label {
@@ -29,11 +29,12 @@
     margin: 1rem 0;
     line-height: 1.6;
     font-family: 'Sabon';
+    margin-right: 1rem 0;
   }
   
   .read-more {
     display: inline-block;
-    color: #333;
+    color: white;
     text-decoration: none;
     /*font-weight: bold;*/
     font-size: 0.8rem;
@@ -45,7 +46,7 @@
   
   .read-more-img {
     display: inline-block;
-    color: #333;
+    color: white;
     text-decoration: none;
     font-size: 0.8rem;
   }

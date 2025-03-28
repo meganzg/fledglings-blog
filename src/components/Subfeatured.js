@@ -24,11 +24,11 @@ function Subfeatured({ posts }){
                         }} 
                     />
                  </Link>
-                 <p className="excerpt">{subpost.Text.substring(0, subpost.Text.indexOf(".")) + "."}</p>
-                 <Link to={`/Read/${subpost.documentId}`} className="read-more"> 
+                 {/*<p className="excerpt">{subpost.Text.substring(0, subpost.Text.indexOf(".")) + "."}</p>*/}
+                 {/*<Link to={`/Read/${subpost.documentId}`} className="read-more"> */}
                  {/*uses react router component to navigate to read page*/}
-                    read more
-                 </Link>
+                    {/*read more*/}
+                 {/*</Link>*/}
                  </div>
             ))}
         </div>

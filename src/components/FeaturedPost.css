@@ -1,17 +1,17 @@
 .featured-post {
-    margin: 2rem auto;
-    padding: 2rem;
-    max-width: 800px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px white(0,0,0,0);
 }
 
 .featured-label {
-    text-transform: uppercase;
-    color: #666;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
 .featured-content h2 {
@@ -36,6 +36,7 @@
     color: #333;
     text-decoration: none;
     font-size: 0.8rem;
+    background-color: white;
   }
   
   .read-more:hover {
@@ -50,17 +51,6 @@
   }
   
   .read-more-title:hover {
-    color: #666;
-  }
-
-  .read-more-img {
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    font-size: 0.8rem;
-  }
-  
-  .read-more-img:hover {
     color: #666;
   }
 

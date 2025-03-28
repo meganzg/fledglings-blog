@@ -21,17 +21,17 @@ function FeaturedPost({ post }) {
                         src={`http://localhost:1337${post.Media.url}`}
                         alt="Blog Post Image" 
                         style={{ 
-                        width: '300px', 
-                        height: '200px', 
+                        width: '600px', 
+                        height: '400px', 
                         objectFit: 'cover', 
                         }} 
                     />
                 </Link>
                  <p className="excerpt">{post.Text.substring(0, post.Text.indexOf("\n")) + "..."}</p>
-                 <Link to={`/Read/${post.documentId}`} className="read-more"> 
+                 {/*<Link to={`/Read/${post.documentId}`} className="read-more"> */}
                  {/*uses react router component to navigate to read page*/}
-                    read more
-                 </Link>
+                    {/*read more*/}
+                 {/*</Link>*/}
             </div>
         </div>
     )

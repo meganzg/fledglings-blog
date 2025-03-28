@@ -15,17 +15,17 @@ function Home(){
 
     // Find the featured post
     const featuredPost = data.find(post => post.Featured === true);
-    const subfeatured = data.filter(post => post.subFeatured == true);
+    const subfeatured = data.filter(post => post.subFeatured === true);
 
     return (
         <div className="home">
-            <section className="intro">
-                <p className="welcome-text">
-                Welcome to Fledglings
-                </p>
-            </section>
-            <FeaturedPost post={featuredPost} />
-            <Subfeatured posts={subfeatured} />
+            
+            <div className="left-column">
+                <FeaturedPost post={featuredPost} />
+            </div>
+            <div className="right-column">
+                <Subfeatured posts={subfeatured} />
+            </div>
         </div>
     );
 }
