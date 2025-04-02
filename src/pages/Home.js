@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturedPost from '../components/FeaturedPost';
 import Subfeatured from '../components/Subfeatured';
+import RecentlyPublished from '../components/RecentlyPublished';
 import useFetch from '../hooks/useFetch'
 import './Home.css';
 
@@ -16,17 +17,26 @@ function Home(){
     // Find the featured post
     const featuredPost = data.find(post => post.Featured === true);
     const subfeatured = data.filter(post => post.subFeatured === true);
+    const recentlyPublished = data.filter(post => (post.Featured === true || post.subFeatured === true))
+    console.log("Recent: ", recentlyPublished)
 
     return (
-        <div className="home">
-            
-            <div className="left-column">
-                <FeaturedPost post={featuredPost} />
+        <div>
+            <div className="home">
+                <div className="left-column">
+                    <FeaturedPost post={featuredPost} />
+                </div>
+                <div className="right-column">
+                    <Subfeatured posts={subfeatured} />
+                </div>
             </div>
-            <div className="right-column">
-                <Subfeatured posts={subfeatured} />
+            <div>
+                <div className="recently-published">
+                        <RecentlyPublished posts={recentlyPublished} />
+                </div>
             </div>
         </div>
+        
     );
 }
 

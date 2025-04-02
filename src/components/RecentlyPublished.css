@@ -1,0 +1,49 @@
+.RecPubHeader{
+    font-size: 30px;
+    background-color: white;
+    font-family: 'Sabon';
+}
+
+.RecPubTitle{
+    font-family: 'Sabon';
+    margin-top: 0px;
+}
+
+.RecPubAuthor{
+    font-family: 'Sabon';
+    font-size: 15px;
+    color: #666;
+    font-style: italic;
+}
+
+.RecPubDate{
+    font-family: 'Sabon';
+    font-size:  15px;
+    color: #666;
+    font-style: italic;
+}
+
+.recent-content{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.RecPubText{
+    margin-top: 200px;
+    font-family: 'Sabon';
+    font-style: italic;
+}
+
+.RecPub-read-more-text{
+    color: black;
+    text-decoration: none;
+}
+
+.RecPub-read-more-post{
+    color:black;
+    text-decoration: none;
+}

@@ -11,24 +11,20 @@ function Subfeatured({ posts }){
             <span className="subfeatured-label">Subfeatured Posts</span> {/*create a span for the featured post label*/}
             {posts.map(subpost => (
                 <div className="subfeatured-content"> {/*create a featured content division*/}
-                <h2>{subpost.Title}</h2> {/*get the title from the post data*/}
-                 <p className="author">By {subpost.Author}</p> {/*show relevant data*/}
-                 <Link to={`/Read/${subpost.documentId}`} className="read-more-img"> 
-                    <img 
-                        src={`http://localhost:1337${subpost.Media.url}`}
-                        alt="Blog Post Image" 
-                        style={{ 
-                        width: '300px', 
-                        height: '200px', 
-                        objectFit: 'cover', 
-                        }} 
-                    />
-                 </Link>
-                 {/*<p className="excerpt">{subpost.Text.substring(0, subpost.Text.indexOf(".")) + "."}</p>*/}
-                 {/*<Link to={`/Read/${subpost.documentId}`} className="read-more"> */}
-                 {/*uses react router component to navigate to read page*/}
-                    {/*read more*/}
-                 {/*</Link>*/}
+                    <h2>{subpost.Title}</h2> {/*get the title from the post data*/}
+                    <p className="author">By {subpost.Author}</p> {/*show relevant data*/}
+                    <Link to={`/Read/${subpost.documentId}`} className="read-more-img"> 
+                        <img 
+                            src={`http://localhost:1337${subpost.Media.url}`}
+                            alt="Blog Post Image" 
+                            style={{ 
+                            width: '300px', 
+                            height: '200px', 
+                            objectFit: 'cover', 
+                            }} 
+                        />
+                    </Link>
+                    {/*<p className="excerpt">{subpost.Text.substring(0, subpost.Text.indexOf(".")) + "."}</p>*/}
                  </div>
             ))}
         </div>
