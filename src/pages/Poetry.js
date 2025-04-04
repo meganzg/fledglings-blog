@@ -23,7 +23,8 @@ function Poetry() {
             {data.filter(featuredPost => featuredPost?.genreFeatured === true && featuredPost?.Genre === 'POETRY').map(featuredPost => (
                 <div key={featuredPost.ID} className="blogpost-card">
                 <Link to={`/Read/${featuredPost.documentId}`} className="poetry-read-more"> 
-                    <h2 className="title">{featuredPost.Title}</h2>
+                    <h2 className="poetryTitle">{featuredPost.Title}</h2>
+                    <p className="poetryAuthor">{featuredPost.Author}</p>
                     <img 
                         src={`http://localhost:1337${featuredPost.Media.url}`}
                         alt="Blog Post Image" 
@@ -42,6 +43,7 @@ function Poetry() {
                 <div key={blogpost.ID} className="blogpost-card">
                     <Link to={`/Read/${blogpost.documentId}`} className="poetry-read-more-recent"> 
                         <h2 className="title">{blogpost.Title}</h2>
+                        <p className="poetryRecentAuthor">{blogpost.Author}</p>
                         <img 
                             src={`http://localhost:1337${blogpost.Media.url}`}
                             alt="Blog Post Image" 
