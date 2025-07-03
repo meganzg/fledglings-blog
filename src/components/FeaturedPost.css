@@ -1,56 +1,56 @@
 .featured-post {
-  margin: 2rem auto;
-  padding: 1rem;
-  max-width: 800px;
+  color: white;
+  padding: 0;
+}
+.featured-flex {
+  display: flex;
+  align-items: center;          /* Vertically center text next to image */
+  justify-content: center;      /* Center the whole thing horizontally on the page */
+  gap: 50px;                    /* Big gap like the example */
+  max-width: 1200px;        /* Keeps content nicely contained on wide screens */            
+  margin-top: 300px;
+  margin-left: 300px;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px white(0,0,0,0);
+  padding: 0;
 }
 
-.featured-label {
-  text-transform: uppercase;
-  color: #666;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+.featured-image img {
+  width: 700px;                 /* Big, beautiful image */
+  height: auto;                 /* Maintain aspect ratio */
+  object-fit: cover;            /* Crop neatly if needed */
 }
 
-.featured-content h2 {
-    margin: 0.5rem 0;
-    color: #333;
-    font-style: italic;
-  }
-  
-  .author {
-    color: #666;
-    font-style: italic;
-  }
-  
-  .excerpt {
-    margin: 1rem 0;
-    line-height: 1.6;
-    font-family: 'Sabon';
-  }
-  
-  .read-more {
+.featured-text {
+  min-width: 500px;          /* Limit text width for readability */
+  text-align: center;
+  background-color: white;
+}
+
+.featured-text h2 {
+  font-family: 'Sabon';
+  font-size: 2.5rem;            /* Large title like example */
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.featured-text .author {
+  font-size: 1.8rem;            /* Author size in example */
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.featured-text .excerpt {
+  font-size: 1.2rem;            /* Body text size */              
+  line-height: 1.6;
+  color: black;
+}
+
+ .read-more-title {
     display: inline-block;
     color: #333;
     text-decoration: none;
     font-size: 0.8rem;
-    background-color: white;
   }
-  
-  .read-more:hover {
-    color: #666;
-  }
-
-  .read-more-title {
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    font-size: 0.8rem;
-  }
-  
-  .read-more-title:hover {
-    color: #666;
-  }
-

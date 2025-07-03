@@ -6,9 +6,14 @@
     background-color: white;
 }
 
+.MainReadHeader {
+    margin-top: 150px;
+}
+
 .title{
     color: black;
     text-decoration: none;
+    margin-top: 20px;
 }
 
 .poetry-read-more{
@@ -26,4 +31,8 @@
     font-size: 15px;
     font-style: italic;
     color: dark grey;
+}
+
+.my-divider {
+    max-width: 800px;
 }

@@ -8,33 +8,33 @@ function RecentlyPublished({ posts }){
     if (!posts) { return null; }
 
     return(
-        <div>
+        <div className="recently-published">
             <p className="RecPubHeader">Recently Published</p>
-            <div className="posts">
+            <div className="recent-grid">
                 {posts.map(post => (
-                    <div className="recent-content"> {/*create a featured content division*/}
-                        <div>
-                        <Link to={`/Read/${post.documentId}`} className="RecPub-read-more-post"> 
-                            <h2 className = "RecPubTitle">{post.Title}</h2> {/*get the title from the post data*/}
-                            <p className="RecPubAuthor">By {post.Author} {post.Date.substring(0, 10)}</p> {/*show relevant data*/}
-                                <img 
-                                    src={`http://localhost:1337${post.Media.url}`}
-                                    alt="Blog Post Image" 
-                                    style={{ 
-                                    width: '300px', 
-                                    height: '200px', 
-                                    objectFit: 'cover', 
-                                    }} 
-                                />
-                        </Link>
-                        </div>
-                        <Link to={`/Read/${post.documentId}`} className="RecPub-read-more-text"> 
-                            <p className="RecPubText">{post.Text.substring(0, 100)}</p>
-                        </Link>
+                <div className="recent-card" key={post.documentId}>
+                    <Link to={`/Read/${post.documentId}`} className="recent-card-link">
+                    <img 
+                        className="recent-card-image"
+                        src={`http://localhost:1337${post.Media.url}`} 
+                        alt={post.Title} 
+                        style={{ 
+                            width: '400px', 
+                            height: '400px', 
+                            objectFit: 'cover', 
+                        }}
+                    />
+                    <div className="recent-card-text">
+                        <h3 className="recent-card-title"><u>{post.Title}</u> by {post.Author}</h3>
+                        <p className="recent-card-excerpt">
+                        {post.Text.substring(0, 100)}...
+                        </p>
                     </div>
-                ))}
-            </div>
+                    </Link>
+                </div>
+            ))}
         </div>
+    </div> 
     )
 }
 

@@ -1,23 +1,34 @@
 .header {
-    font-size: 5rem;
     text-align: center;
-    padding: 2rem;
-    background-color: #f8f8f8;
+    font-size: 3rem;
+    padding: 3rem;
     color: black;
     font-family: 'Sabon';
+    position: fixed;
+    width: 100%;
+    background-color: #c7bcb7; /* Tan color like your image */
+    z-index: 1000;
+    height: 30px; /* or whatever height matches your design */
+    align-items: bottom;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .site-title {
     font-size: 3rem;
     margin: 0;
     text-decoration: none;
-    color: inherit;
+    color: black;
+    text-align: center;
 }
 
 .small-header {
     font-size: 1.5rem;
-    text-indent: 200px;
-    margin: 30px;
     text-align: left;
     font-family: 'Sabon';
+    color: black
 }
+
+.site-header {
+    color: black;
+}
+

@@ -18,7 +18,6 @@ function Poetry() {
 
     return (
         <div>
-            <h2>Featured</h2>
             <p className="MainReadHeader">Poetry</p>
             {data.filter(featuredPost => featuredPost?.genreFeatured === true && featuredPost?.Genre === 'POETRY').map(featuredPost => (
                 <div key={featuredPost.ID} className="blogpost-card">
@@ -38,7 +37,8 @@ function Poetry() {
                 <p className="blogText">{featuredPost.Text.substring(0, featuredPost.Text.indexOf("\n")) + "..."}</p>
             </div>
             ))}
-            <h2>Recent</h2>
+            <hr className="my-divider" />
+
             {data.filter(blogpost => blogpost?.genreFeatured === null && blogpost?.Genre === 'POETRY').map(blogpost => (
                 <div key={blogpost.ID} className="blogpost-card">
                     <Link to={`/Read/${blogpost.documentId}`} className="poetry-read-more-recent"> 

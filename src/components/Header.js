@@ -6,18 +6,11 @@ function Header(){
 
     const location = useLocation();
 
-    if (location.pathname === '/')
-        return (
-            <header>
-                <p className="header">FLEDGLINGS</p>
-            </header>
-        );
-
     return  (
-        <header>
-            <Link to="/" className="site-title">
-                <p className="small-header">fledglings</p>
-            </Link>
+        <header className="site-header">
+            <div className="nav-container">
+                
+            </div>
         </header>
     );
 }

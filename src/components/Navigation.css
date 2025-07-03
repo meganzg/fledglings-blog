@@ -1,23 +1,40 @@
 .navigation {
-    background-color: #d2d0d0;
-    padding: 1rem;
+    background-color: #c7bcb7;
+    height: 250px;
+    z-index: 1000px;
+    top: 0;
+    padding: 0rem;
     font-family: 'Sabon';
     margin-top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #c7bcb7;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .head {
+    font-size: 75px;
+    margin-right: 70px;
+    padding: 0rem;
+    margin-top: 100px;
   }
   
   .navigation ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0rem;
+    margin-right: 50px;
+    margin-top: 35px;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: right;
+    gap: 1.5rem;
   }
   
   .navigation a {
     color: black;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
+    text-align: right;
   }
 
   .navigation a:hover {
@@ -25,20 +42,25 @@
   }
 
 .small-navigation {
+    background-color: #c7bcb7;
+    top: 0;
+    margin-top: 0%;
+    padding: 0rem;
+    font-family: 'Sabon';
     position: fixed;
-    top: 20px;
-    right: 200px;
-    background-color: transparent;
+    width: 100%;
+    background-color: #c7bcb7;
+    position: fixed;
+    justify-items: right;
     z-index: 1000;
     font-family: 'Sabon';
-    padding: 1rem;
-    background-color: #d2d0d0;
+    height: 100px;
   }
 
   .small-navigation ul {
+    margin-right: 70px;
+    margin-top: 50px;
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     gap: 1.5rem;
   }
@@ -47,6 +69,7 @@
     color: black;
     text-decoration: none;
     font-size: 1.1rem;
+    margin-top: 50px;
   }
   
   .small-navigation a:hover {
@@ -57,4 +80,34 @@
     text-decoration: underline;
     font-weight: bold;
   }
+
+.small-head {
+    margin-left: 20px;
+    margin-right: 850px;
+    margin-top: -10px;
+    font-size: 2rem;
+    text-align: left;
+    font-family: 'Sabon';
+    color: black;
+  }
+
+/* Shrink state */
+.navigation.shrink {
+  height: 100px;
+}
+
+.navigation.shrink .head {
+  font-size: 30px;
+  margin-right: 230px;
+  margin-top: 0px;
+}
+
+.navigation.shrink ul {
+  margin-top: 30;
+}
+
+.navigation.shrink a {
+  font-size: 16px;
+}
+
 
