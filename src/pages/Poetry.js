@@ -10,7 +10,7 @@ const token = 'f66b102732a093f6c68ca1da8f2909f3e8f23be418b9c4de3922f1aeb6a35fe9f
 
 function Poetry() {
 
-    const { loading, error, data } = useFetch('https://classic-happiness-11f8e99995.strapiapp.com/api/blogposts', token)
+    const { loading, error, data } = useFetch('https://classic-happiness-11f8e99995.strapiapp.com/api/blogposts?populate=*', token)
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>{JSON.stringify(data)}</p>
@@ -25,7 +25,7 @@ function Poetry() {
                     <h2 className="poetryTitle">{featuredPost.Title}</h2>
                     <p className="poetryAuthor">{featuredPost.Author}</p>
                     <img 
-                        src={`http://localhost:1337${featuredPost.Media.url}`}
+                        src={`https://classic-happiness-11f8e99995.strapiapp.com${featuredPost.ID.Media.url}`}
                         alt="Blog Post Image" 
                         style={{ 
                         width: '300px', 

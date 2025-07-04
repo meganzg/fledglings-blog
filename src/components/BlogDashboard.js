@@ -15,7 +15,7 @@ const BlogDashboard = () => {
         const fetchPosts = async () => { // async does not freeze rest of app while we wait for promise data
             try {
                 // await will make code INSIDE async function wait for data to load before cotinuing to execute
-                const response = await fetch('http://localhost:1337/api/blog-posts?populate=*');
+                const response = await fetch('https://classic-happiness-11f8e99995.strapiapp.com/api/blogposts');
                 const data = await response.json(); // convert response to JSON
                 setPosts(data.data); // fetched array of posts stored in .data, update data array
                 setLoading(false);
