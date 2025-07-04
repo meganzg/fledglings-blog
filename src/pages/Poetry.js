@@ -10,7 +10,7 @@ const token = 'f66b102732a093f6c68ca1da8f2909f3e8f23be418b9c4de3922f1aeb6a35fe9f
 
 function Poetry() {
 
-    const { loading, error, data } = useFetch('http://localhost:1337/api/blogposts?populate=*', token)
+    const { loading, error, data } = useFetch('https://classic-happiness-11f8e99995.strapiapp.com/api/blogposts', token)
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>{JSON.stringify(data)}</p>
