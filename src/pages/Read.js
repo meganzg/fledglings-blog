@@ -10,7 +10,7 @@ const token = 'f66b102732a093f6c68ca1da8f2909f3e8f23be418b9c4de3922f1aeb6a35fe9f
 
 function Read(){
     const { documentId } = useParams();
-    const { loading, error, data } = useFetch(`http://localhost:1337/api/blogposts?filters[documentId][$eq]=${documentId}&populate=*`, token);
+    const { loading, error, data } = useFetch(`https://classic-happiness-11f8e99995.strapiapp.com/api/blogposts?filters[documentId][$eq]=${documentId}&populate=*`, token);
 
     const post = data?.[0];
     if (!post) return <p>Loading post...</p>;
@@ -23,7 +23,7 @@ function Read(){
             <p className="title">{post.Title}</p>
             <p className="author">{post.Author}</p>
             <img 
-                src={`http://localhost:1337${post.Media.url}`}
+                src={post.Media.url}
                 alt="Blog Post Image" 
                 style={{ 
                 width: '600px', 

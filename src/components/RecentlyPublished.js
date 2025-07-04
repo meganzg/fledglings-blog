@@ -16,7 +16,7 @@ function RecentlyPublished({ posts }){
                     <Link to={`/Read/${post.documentId}`} className="recent-card-link">
                     <img 
                         className="recent-card-image"
-                        src={`http://localhost:1337${post.Media.url}`} 
+                        src={post.Media.url} 
                         alt={post.Title} 
                         style={{ 
                             width: '400px', 

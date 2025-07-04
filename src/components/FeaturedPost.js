@@ -13,7 +13,7 @@ function FeaturedPost({ post }) {
                 <div className="featured-image">
                     <Link to={`/Read/${post.documentId}`}>
                         <img 
-                            src={`https://classic-happiness-11f8e99995.strapiapp.com${post.Media.url}`} 
+                            src={post.Media.url} 
                             alt="Blog Post Image"
                             style={{ 
                             width: '750px', 

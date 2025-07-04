@@ -22,7 +22,7 @@ function Fiction() {
                 <Link to={`/Read/${featuredPost.documentId}`} className="read-more"> 
                     <h2 className="fiction-title">{featuredPost.Title}</h2>
                     <img 
-                        src={`https://classic-happiness-11f8e99995.strapiapp.com${featuredPost.Media.url}`}
+                        src={featuredPost.Media.url}
                         alt="Blog Post Image" 
                         style={{ 
                         width: '300px', 
@@ -40,7 +40,7 @@ function Fiction() {
                     <Link to={`/Read/${blogpost.documentId}`} className="read-more"> 
                         <h2 className="fiction-title-sub">{blogpost.Title}</h2>
                         <img 
-                            src={`http://localhost:1337${blogpost.Media.url}`}
+                            src={blogpost.Media.url}
                             alt="Blog Post Image" 
                             style={{ 
                             width: '300px', 

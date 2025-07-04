@@ -25,7 +25,7 @@ function Poetry() {
                     <h2 className="poetryTitle">{featuredPost.Title}</h2>
                     <p className="poetryAuthor">{featuredPost.Author}</p>
                     <img 
-                        src={`https://classic-happiness-11f8e99995.strapiapp.com${featuredPost.ID.Media.url}`}
+                        src={featuredPost.Media.url}
                         alt="Blog Post Image" 
                         style={{ 
                         width: '300px', 
@@ -45,7 +45,7 @@ function Poetry() {
                         <h2 className="title">{blogpost.Title}</h2>
                         <p className="poetryRecentAuthor">{blogpost.Author}</p>
                         <img 
-                            src={`http://localhost:1337${blogpost.Media.url}`}
+                            src={blogpost.Media.url}
                             alt="Blog Post Image" 
                             style={{ 
                             width: '300px', 

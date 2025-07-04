@@ -9,7 +9,7 @@ const token = 'f66b102732a093f6c68ca1da8f2909f3e8f23be418b9c4de3922f1aeb6a35fe9f
 
 function Nonfiction() {
 
-    const { loading, error, data } = useFetch('https://classic-happiness-11f8e99995.strapiapp.com/api/blogposts', token)
+    const { loading, error, data } = useFetch('https://classic-happiness-11f8e99995.strapiapp.com/api/blogposts?populate=*', token)
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>{JSON.stringify(data)}</p>
@@ -25,7 +25,7 @@ function Nonfiction() {
                 <Link to={`/Read/${featuredPost.documentId}`} className="read-more"> 
                     <h2 className="nonfic-title">{featuredPost.Title}</h2>
                     <img 
-                        src={`http://localhost:1337${featuredPost.Media.url}`}
+                        src={featuredPost.Media.url}
                         alt="Blog Post Image" 
                         style={{ 
                         width: '300px', 
@@ -43,7 +43,7 @@ function Nonfiction() {
                      <Link to={`/Read/${blogpost.documentId}`} className="read-more"> 
                         <h2 className="nonfic-title-sub">{blogpost.Title}</h2>
                         <img 
-                            src={`http://localhost:1337${blogpost.Media.url}`}
+                            src={blogpost.Media.url}
                             alt="Blog Post Image" 
                             style={{ 
                             width: '300px', 

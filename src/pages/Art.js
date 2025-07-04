@@ -21,7 +21,7 @@ function Art() {
                 <Link to={`/Read/${featuredPost.documentId}`} className="read-more-recent"> 
                     <h2 className="title">{featuredPost.Title}</h2>
                     <img 
-                        src={`https://classic-happiness-11f8e99995.strapiapp.com${featuredPost.Media.url}`}
+                        src={featuredPost.Media.url}
                         alt="Blog Post Image" 
                         style={{ 
                         width: '300px', 
@@ -38,7 +38,7 @@ function Art() {
                     <Link to={`/Read/${blogpost.documentId}`} className="read-more-recent"> 
                         <h2 className="title">{blogpost.Title}</h2>
                         <img 
-                            src={`http://localhost:1337${blogpost.Media.url}`}
+                            src={blogpost.Media.url}
                             alt="Blog Post Image" 
                             style={{ 
                             width: '300px', 
