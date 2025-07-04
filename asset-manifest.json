@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fledglings-blog/static/css/main.46ded623.css",
-    "main.js": "/fledglings-blog/static/js/main.b30d1437.js",
+    "main.css": "/fledglings-blog/static/css/main.2decb3d0.css",
+    "main.js": "/fledglings-blog/static/js/main.60866233.js",
     "static/js/453.cca9d7a6.chunk.js": "/fledglings-blog/static/js/453.cca9d7a6.chunk.js",
     "index.html": "/fledglings-blog/index.html",
-    "main.46ded623.css.map": "/fledglings-blog/static/css/main.46ded623.css.map",
-    "main.b30d1437.js.map": "/fledglings-blog/static/js/main.b30d1437.js.map",
+    "main.2decb3d0.css.map": "/fledglings-blog/static/css/main.2decb3d0.css.map",
+    "main.60866233.js.map": "/fledglings-blog/static/js/main.60866233.js.map",
     "453.cca9d7a6.chunk.js.map": "/fledglings-blog/static/js/453.cca9d7a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46ded623.css",
-    "static/js/main.b30d1437.js"
+    "static/css/main.2decb3d0.css",
+    "static/js/main.60866233.js"
   ]
 }
