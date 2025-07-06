@@ -19,7 +19,6 @@ import Art from './pages/Art';
 import Fiction from './pages/Fiction';
 import Nonfiction from './pages/Nonfiction';
 
-
 function App() {
   return (
     <Router> {/*create router thing*/}

@@ -12,6 +12,7 @@ function Art() {
     if (error) return <p>{JSON.stringify(data)}</p>;
 
     const artPosts = data.filter(post => post?.Genre === 'ART');
+    console.log("api: ", artPosts);
 
     return (
         <div>
@@ -21,14 +22,12 @@ function Art() {
             <div className="posts-grid">
                 {artPosts.map(post => (
                     <div key={post.ID} className="art-card">
-                        <Link to={`/Read/${post.documentId}`} className="art-read-more">
-                            <img
-                                src={post.Media.url}
-                                alt="Art Post"
-                                className="art-image"
-                            />
-                            <h2 className="art-title">{post.Title}</h2>
-                            <p className="art-author">{post.Author}</p>
+                        <Link to={`/Read/${post.documentId}`} key={post.ID} className="featured-post-link">
+                            <h2 className="fiction-title">{post.Title}</h2>
+                            <img src={post.Media.url} 
+                                alt="Featured Right" 
+                                className="art-image" />
+                            <p className="fiction-author">{post.Author}</p>
                         </Link>
                     </div>
 

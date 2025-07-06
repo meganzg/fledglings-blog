@@ -6,9 +6,10 @@ import "./Read.css";
 import { Link } from 'react-router-dom';
 
 
-const token = 'f66b102732a093f6c68ca1da8f2909f3e8f23be418b9c4de3922f1aeb6a35fe9fd40154580ae97c265200b1d394ccb4a31190e9ab3fbf7f931c8550ae2815e0f8c54992bbff03dc309ec935077882816926394358ab38af094a6317203665c838bbc57766765fa0b9af4efb5b73ad47c88b0a74739f2e996071bdefe53db85c1'
+function ArtView(){
 
-function Read(){
+    const token = '1b9b147a9464233c1c5ca8eec509b02312d88bea578fd094bc57e9af5d3db669ca5ae8797678903d84481b80ca81227907ff371b0572415fee2c709ec91c8570e2d45985d84fb268af29c43dd20792c188572c92bfd05503ac90f04cbc096dc878d430a55fd19e0e6d1d7e677db270ae36a9ad7abce6195173695efe1da11bee'
+
     const { documentId } = useParams();
     const { loading, error, data } = useFetch(`https://classic-happiness-11f8e99995.strapiapp.com/api/blogposts?filters[documentId][$eq]=${documentId}&populate=*`, token);
 
@@ -28,14 +29,9 @@ function Read(){
                 }} 
             />
             <p className="author">By {post.Author}</p>
-            <div className="text">
-                {post.Text.split(/\n+/).map((paragraph, idx) => (
-                    <p key={idx}>{paragraph.trim()}</p>
-                ))}
-            </div>
         </div>
     );
     
 }
 
-export default Read;
+export default ArtView;

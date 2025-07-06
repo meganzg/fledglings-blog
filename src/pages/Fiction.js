@@ -48,26 +48,6 @@ function Fiction() {
                     </div>
                 </div>
             )}
-
-            {/* Recent posts section */}
-            <h2>Recent</h2>
-            {recentFiction.map(blogpost => (
-                <div key={blogpost.ID} className="blogpost-card">
-                    <Link to={`/Read/${blogpost.documentId}`} className="read-more"> 
-                        <h2 className="fiction-title-sub">{blogpost.Title}</h2>
-                        <img 
-                            src={blogpost.Media.url}
-                            alt="Blog Post Image" 
-                            style={{ 
-                                width: '300px', 
-                                height: '200px', 
-                                objectFit: 'cover', 
-                            }} 
-                        />
-                    </Link>
-                    <p className="blogText">{blogpost.Text.substring(0, blogpost.Text.indexOf(".")) + "."}</p>
-                </div>
-            ))}
         </div>
     );
 }
