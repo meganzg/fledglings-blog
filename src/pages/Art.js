@@ -15,7 +15,8 @@ function Art() {
 
     return (
         <div>
-            <p className="MainReadHeader">ART</p>
+            <p className="MainReadHeader">Art</p>
+            <hr className="my-divider" />
             {data.filter(featuredPost => featuredPost?.genreFeatured === true && featuredPost?.Genre === 'ART').map(featuredPost => (
                 <div key={featuredPost.ID} className="blogpost-card">
                 <Link to={`/Read/${featuredPost.documentId}`} className="read-more-recent"> 

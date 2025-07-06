@@ -18,8 +18,8 @@ function Nonfiction() {
 
     return (
         <div>
-            <p className="MainReadHeader">NONFICTION</p>
-            <h2>Featured</h2>
+            <p className="MainReadHeader">Nonfiction</p>
+            <hr className="my-divider" />
             {data.filter(featuredPost => featuredPost?.genreFeatured === true && featuredPost?.Genre === 'NONFICTION').map(featuredPost => (
                 <div key={featuredPost.ID} className="featuredPost-card">
                 <Link to={`/Read/${featuredPost.documentId}`} className="read-more"> 
@@ -37,7 +37,6 @@ function Nonfiction() {
                 <p className="nonfic-blogText">{featuredPost.Text.substring(0, 100) + "..."}</p>
             </div>
             ))}
-            <h2>Recent</h2>
             {data.filter(blogpost => blogpost?.Genre === 'NONFICTION' && blogpost.genreFeatured === null).map(blogpost => (
                 <div key={blogpost.ID} className="blogpost-card">
                      <Link to={`/Read/${blogpost.documentId}`} className="read-more"> 

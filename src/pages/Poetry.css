@@ -7,7 +7,8 @@
 }
 
 .MainReadHeader {
-    margin-top: 150px;
+    margin-top: 175px;
+    font-size: 37px;
 }
 
 .title{
@@ -34,5 +35,5 @@
 }
 
 .my-divider {
-    max-width: 800px;
+    max-width: 1100px;
 }

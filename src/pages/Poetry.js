@@ -34,11 +34,10 @@ function Poetry() {
                         }} 
                     />
                 </Link>
-                <p className="blogText">{featuredPost.Text.substring(0, featuredPost.Text.indexOf("\n")) + "..."}</p>
-            </div>
+                    <p className="blogText">{featuredPost.Text.substring(0, featuredPost.Text.indexOf("\n")) + "..."}</p>
+                </div>
             ))}
             <hr className="my-divider" />
-
             {data.filter(blogpost => blogpost?.genreFeatured === null && blogpost?.Genre === 'POETRY').map(blogpost => (
                 <div key={blogpost.ID} className="blogpost-card">
                     <Link to={`/Read/${blogpost.documentId}`} className="poetry-read-more-recent"> 
