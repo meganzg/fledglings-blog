@@ -12,3 +12,84 @@
     color: white;
     background-color: white;
 }
+
+.archive {
+    font-family: 'Sabon';
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.archive-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.archive-card {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 200px;
+}
+
+.archive-image {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.archive-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-title-link {
+  text-decoration: none;
+  color: black;
+}
+
+.archive-title {
+  font-family: 'Sabon', serif;
+  font-size: 20px;
+  margin: 0;
+  text-align: left;
+
+}
+
+.archive-author {
+  font-family: 'Sabon', serif;
+  font-size: 16px;
+  margin: 5px 0 15px;
+  text-align: left;
+
+}
+
+.archive-excerpt {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  color: #555;
+  text-align: left;
+
+}
+
+/* Responsive layout: stack on mobile */
+@media (max-width: 768px) {
+  .archive-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .archive-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .archive-text {
+    text-align: left;
+  }
+}

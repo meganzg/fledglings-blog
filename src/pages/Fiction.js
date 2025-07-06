@@ -2,6 +2,8 @@ import React from 'react';
 import useFetch from '../hooks/useFetch'
 import { Link } from 'react-router-dom';
 import './Fiction.css';
+import Footer from '../components/Footer';
+
 
 const token = 'f66b102732a093f6c68ca1da8f2909f3e8f23be418b9c4de3922f1aeb6a35fe9fd40154580ae97c265200b1d394ccb4a31190e9ab3fbf7f931c8550ae2815e0f8c54992bbff03dc309ec935077882816926394358ab38af094a6317203665c838bbc57766765fa0b9af4efb5b73ad47c88b0a74739f2e996071bdefe53db85c1'
 
@@ -13,7 +15,7 @@ function Fiction() {
     if (error) return <p>{JSON.stringify(data)}</p>
 
     const featuredFiction = data.filter(fp => fp?.genreFeatured === true && fp?.Genre === 'FICTION');
-    const recentFiction = data.filter(bp => bp?.genreFeatured === null && bp?.Genre === 'FICTION');
+    const recentFiction = data.filter(blogpost => blogpost?.genreFeatured === null && blogpost?.Genre === 'FICTION');
 
     return (
         <div>
@@ -48,6 +50,31 @@ function Fiction() {
                     </div>
                 </div>
             )}
+
+            <p className="archive">Archive</p>
+                <div className="archive-container">
+                    {recentFiction.map(blogpost => (
+                        <div key={blogpost.ID} className="archive-card">
+                            <Link to={`/Read/${blogpost.documentId}`} className="archive-image-link">
+                                <img 
+                                    src={blogpost.Media.url}
+                                    alt="Blog Post Image"
+                                    className="archive-image"
+                                />
+                            </Link>
+                            <div className="archive-text">
+                                <Link to={`/Read/${blogpost.documentId}`} className="archive-title-link">
+                                    <h3 className="archive-title">{blogpost.Title}</h3>
+                                </Link>
+                                <p className="archive-author">by {blogpost.Author}</p>
+                                <p className="archive-excerpt">
+                                    {blogpost.Text.substring(0, blogpost.Text.indexOf(".")) + "."}
+                                </p>
+                            </div>
+                        </div>
+                    ))};
+                </div>
+            <Footer />
         </div>
     );
 }
