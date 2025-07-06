@@ -19,9 +19,7 @@ function Read(){
 
     return(
         <div>
-            <p className="genre">{post.Genre}</p>
             <p className="title">{post.Title}</p>
-            <p className="author">{post.Author}</p>
             <img 
                 src={post.Media.url}
                 alt="Blog Post Image" 
@@ -31,7 +29,13 @@ function Read(){
                 objectFit: 'cover', 
                 }} 
             />
-            <p className="text">{post.Text}</p>
+            <p className="author">By {post.Author}</p>
+            <div className="text">
+                {post.Text.split(/\n+/).map((paragraph, idx) => (
+                    <p key={idx}>{paragraph.trim()}</p>
+                ))}
+            </div>
+
             <div>
                 <h2>Related Posts</h2>
                 {related_array.map(related_post => (

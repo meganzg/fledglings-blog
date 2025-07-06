@@ -1,39 +1,14 @@
-.read-more{
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    font-size: 0.8rem;
-    background-color: white;
-}
 
 .MainReadHeader {
-    margin-top: 175px;
-    font-size: 37px;
-}
-
-.title{
-    color: black;
-    text-decoration: none;
-    margin-top: 20px;
-}
-
-.poetry-read-more{
-    color: black;
-    text-decoration: none;
-}
-
-.poetry-read-more-recent{
-    color: black;
-    text-decoration: none;
-}
-
-.poetryRecentAuthor{
-    font-family: "Sabom";
-    font-size: 15px;
-    font-style: italic;
-    color: dark grey;
+    margin-top: 170px;
+    font-size: 40px;
 }
 
 .my-divider {
     max-width: 1100px;
+}
+
+.read-more {
+    color: white;
+    background-color: white;
 }

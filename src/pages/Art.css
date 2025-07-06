@@ -1,0 +1,92 @@
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.art-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Image styling */
+.art-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Dark overlay for hover effect */
+.art-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Title styling */
+.art-title {
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+    text-align: center;
+    font-family: 'Sabon';
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Author styling */
+.art-author {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    color: black;
+    font-size: 14px;
+    margin: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect: show overlay and text */
+.art-card:hover::before {
+    opacity: 1;
+}
+
+.art-card:hover .art-title,
+.art-card:hover .art-author {
+    opacity: 1;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+    .art-image {
+        height: 200px;
+    }
+
+    .art-title {
+        font-size: 18px;
+        bottom: 35px;
+    }
+
+    .art-author {
+        font-size: 12px;
+        bottom: 15px;
+    }
+}

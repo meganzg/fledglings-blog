@@ -13,48 +13,62 @@ function Nonfiction() {
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>{JSON.stringify(data)}</p>
-    console.log("All data:", data);
 
+    const featuredNonfic = data.filter(fp => fp?.genreFeatured === true && fp?.Genre === 'NONFICTION');
+    const recentNonfic = data.filter(bp => bp?.genreFeatured === null && bp?.Genre === 'NONFICTION');
 
     return (
         <div>
             <p className="MainReadHeader">Nonfiction</p>
             <hr className="my-divider" />
-            {data.filter(featuredPost => featuredPost?.genreFeatured === true && featuredPost?.Genre === 'NONFICTION').map(featuredPost => (
-                <div key={featuredPost.ID} className="featuredPost-card">
-                <Link to={`/Read/${featuredPost.documentId}`} className="read-more"> 
-                    <h2 className="nonfic-title">{featuredPost.Title}</h2>
-                    <img 
-                        src={featuredPost.Media.url}
-                        alt="Blog Post Image" 
-                        style={{ 
-                        width: '300px', 
-                        height: '200px', 
-                        objectFit: 'cover', 
-                        }} 
-                    />
-                </Link>
-                <p className="nonfic-blogText">{featuredPost.Text.substring(0, 100) + "..."}</p>
-            </div>
-            ))}
-            {data.filter(blogpost => blogpost?.Genre === 'NONFICTION' && blogpost.genreFeatured === null).map(blogpost => (
+
+            {/* Featured section */}
+            {featuredNonfic.length > 0 && (
+                <div className="featured-posts-container">
+                    <div className="featured-left">
+                        {featuredNonfic.slice(0,1).map(fp => (
+                            <Link to={`/Read/${fp.documentId}`} key={fp.ID} className="featured-post-link">
+                                <img src={fp.Media.url} 
+                                     alt="Featured 1" 
+                                     className="featured-left-image" />
+                                <h2 className="fiction-title">{fp.Title}</h2>
+                                <p className="fiction-author">{fp.Author}</p>
+                            </Link>
+                        ))}
+                    </div>
+
+                    <div className="featured-right">
+                        {featuredNonfic.slice(1,3).map(fp => (
+                            <Link to={`/Read/${fp.documentId}`} key={fp.ID} className="featured-post-link">
+                                <img src={fp.Media.url} 
+                                     alt="Featured Right" 
+                                     className="featured-right-image" />
+                                <h2 className="fiction-title">{fp.Title}</h2>
+                                <p className="fiction-author">{fp.Author}</p>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Recent posts section */}
+            <h2>Recent</h2>
+            {recentNonfic.map(blogpost => (
                 <div key={blogpost.ID} className="blogpost-card">
-                     <Link to={`/Read/${blogpost.documentId}`} className="read-more"> 
-                        <h2 className="nonfic-title-sub">{blogpost.Title}</h2>
+                    <Link to={`/Read/${blogpost.documentId}`} className="read-more"> 
+                        <h2 className="fiction-title-sub">{blogpost.Title}</h2>
                         <img 
                             src={blogpost.Media.url}
                             alt="Blog Post Image" 
                             style={{ 
-                            width: '300px', 
-                            height: '200px', 
-                            objectFit: 'cover', 
+                                width: '300px', 
+                                height: '200px', 
                             }} 
                         />
                     </Link>
-                    <p className="nonfic-blogText">{blogpost.Text.substring(0, 100) + "..."}</p>
+                    <p className="blogText">{blogpost.Text.substring(0, blogpost.Text.indexOf(".")) + "."}</p>
                 </div>
             ))}
-            
         </div>
     );
 }
