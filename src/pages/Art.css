@@ -39,8 +39,9 @@
 /* Title styling */
 .art-title {
     position: absolute;
-    bottom: 50px;
-    left: 15px;
+    top: 50%;                       /* move to vertical center */
+    left: 50%;                      /* move to horizontal center */
+    transform: translate(-50%, -50%); /* perfectly center */
     text-align: center;
     font-family: 'Sabon';
     color: black;
@@ -55,8 +56,10 @@
 /* Author styling */
 .art-author {
     position: absolute;
-    bottom: 20px;
-    left: 15px;
+    top: calc(50% + 30px);           /* 30px below the centered title */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     color: black;
     font-size: 14px;
     margin: 0;
@@ -90,4 +93,8 @@
         font-size: 12px;
         bottom: 15px;
     }
+}
+
+.heading {
+    font-size: 30px;
 }

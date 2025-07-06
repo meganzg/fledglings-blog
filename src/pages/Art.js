@@ -25,11 +25,11 @@ function Art() {
                 {artPosts.map(post => (
                     <div key={post.ID} className="art-card">
                         <Link to={`/Read/${post.documentId}`} key={post.ID} className="featured-post-link">
-                            <h2 className="fiction-title">{post.Title}</h2>
+                            <h2 className="art-title">{post.Title}</h2>
                             <img src={post.Media.url} 
                                 alt="Featured Right" 
                                 className="art-image" />
-                            <p className="fiction-author">{post.Author}</p>
+                            <p className="art-author">{post.Author}</p>
                         </Link>
                     </div>
 

@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-left: 50px;
 }
 
 .footer-logo {
@@ -32,13 +33,16 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 10px 20px;
+  gap: 30px 50px;
+  margin-right: 200px;
+  text-align: left;
 }
 
 .footer-right .footer-links li a {
   color: black;
   text-decoration: none;
   font-size: 16px;
+  text-align: left;
 }
 
 .footer-right .footer-links li a:hover {
@@ -49,8 +53,8 @@
 @media (max-width: 768px) {
   .site-footer {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
   }
 
   .footer-right .footer-links {
