@@ -33,19 +33,25 @@
   color: #000;
   margin-bottom: 0.5rem;
   padding: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .featured-text .author {
   font-size: 1.8rem;            /* Author size in example */
   font-weight: 400;
   color: #000;
-  margin-bottom: 1.5rem;
+  margin-top: 0px;
+
 }
 
 .featured-text .excerpt {
   font-size: 1.2rem;            /* Body text size */              
   line-height: 1.6;
-  color: black;
+  color: rgb(51, 51, 51);
+  font-family: 'Sabon';
+  max-width: 200px;
+  margin-left: 150px;
 }
 
  .read-more-title {

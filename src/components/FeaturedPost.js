@@ -28,7 +28,7 @@ function FeaturedPost({ post }) {
                     <h2>{post.Title}</h2>
                 </Link>
                 <p className="author">by {post.Author}</p>
-                <p className="excerpt">{post.Text.substring(0, post.Text.indexOf("\n")) + "..."}</p>
+                <p className="excerpt">{post.Text.substring(0, 100) + "..."}</p>
                 </div>
             </div>
         </div>
