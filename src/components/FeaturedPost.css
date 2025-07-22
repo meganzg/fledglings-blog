@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;          /* Vertically center text next to image */
   justify-content: center;      /* Center the whole thing horizontally on the page */
-  gap: 50px;                    /* Big gap like the example */
-  max-width: 1200px;        /* Keeps content nicely contained on wide screens */            
+  gap: 0px;                    /* Big gap like the example */
+  max-width: 1200;        /* Keeps content nicely contained on wide screens */            
   margin-top: 300px;
   margin-left: 300px;
   background-color: white;
@@ -15,7 +15,7 @@
 }
 
 .featured-image img {
-  width: 700px;                 /* Big, beautiful image */
+  width: 800;                 /* Big, beautiful image */
   height: auto;                 /* Maintain aspect ratio */
   object-fit: cover;            /* Crop neatly if needed */
 }
@@ -50,8 +50,8 @@
   line-height: 1.6;
   color: rgb(51, 51, 51);
   font-family: 'Sabon';
-  max-width: 200px;
-  margin-left: 150px;
+  max-width: 250px;
+  margin-left: 125px;
 }
 
  .read-more-title {
