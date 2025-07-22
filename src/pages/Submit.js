@@ -18,7 +18,7 @@ function Submit() {
 
                 <p>Submissions will be reviewed on a rolling basis, and we’ll email you within 2-3 weeks if your work has been accepted. Thank you for your submissions!</p>
 
-                <p>lease note: We do not accept work that includes machine-generated text.</p>
+                <p>Please note: We do not accept work that includes machine-generated text.</p>
             </div>
             <Footer />
         </div>
