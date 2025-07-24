@@ -33,8 +33,8 @@ function Navigation() {
                     marginRight: `${70 - 40 * scrollProgress}px`,
                     transform: `translate(${ -150 * scrollProgress }px, ${ -105 * scrollProgress }px)`,
                 }}>fledglings</p>
-                <li><Link to="/poetry">Poetry</Link></li>
                 <li><Link to="/fiction">Fiction</Link></li>
+                <li><Link to="/poetry">Poetry</Link></li>
                 <li><Link to="/nonfiction">Nonfiction</Link></li>
                 <li><Link to="/art">Art</Link></li>
                 <li><Link to="/Submit">Submit</Link></li>
@@ -46,8 +46,8 @@ function Navigation() {
             <ul>
                 {/*create clickable links that point to route paths defined in App.js*/}
             <li><Link to="/"><p className="small-head">fledglings</p></Link></li>
-            <li><Link to="/poetry">Poetry</Link></li>
             <li><Link to="/fiction">Fiction</Link></li>
+            <li><Link to="/poetry">Poetry</Link></li>
             <li><Link to="/nonfiction">Nonfiction</Link></li>
             <li><Link to="/art">Art</Link></li>
             <li><Link to="/Submit">Submit</Link></li>

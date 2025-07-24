@@ -19,8 +19,8 @@ function RecentlyPublished({ posts }){
                         src={post.Media.url} 
                         alt={post.Title} 
                         style={{ 
-                            width: '400px', 
-                            height: '400px', 
+                            width: '381px', 
+                            height: '405px', 
                             objectFit: 'cover', 
                         }}
                     />

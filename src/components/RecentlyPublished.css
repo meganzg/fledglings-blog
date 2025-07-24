@@ -1,5 +1,5 @@
 .recently-published {
-  padding: 4rem 2rem;
+  padding: 4rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -13,8 +13,8 @@
 
 .recent-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive 3-column grid */
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); /* Responsive 3-column grid */
+  gap: 45px;
 }
 
 .recent-card {
@@ -24,7 +24,6 @@
 }
 
 .recent-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   background-color: #d3d2d2;
 }
