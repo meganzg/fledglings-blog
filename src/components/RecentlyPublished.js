@@ -25,7 +25,7 @@ function RecentlyPublished({ posts }){
                         }}
                     />
                     <div className="recent-card-text">
-                        <h3 className="recent-card-title"><u>{post.Title}</u> by {post.Author}</h3>
+                        <p className="recent-card-title"><u className="homeTitle">{post.Title}</u> by {post.Author}</p>
                         <p className="recent-card-excerpt">
                         {post.Text.substring(0, 100)}...
                         </p>
