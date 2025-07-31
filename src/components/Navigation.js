@@ -32,6 +32,7 @@ function Navigation() {
                     fontSize: `${75 - 45 * scrollProgress}px`,
                     marginRight: `${70 - 40 * scrollProgress}px`,
                     transform: `translate(${ -150 * scrollProgress }px, ${ -105 * scrollProgress }px)`,
+                    fontFamily: 'BentonModDisplay',
                 }}>fledglings</p>
                 <li><Link to="/fiction">Fiction</Link></li>
                 <li><Link to="/poetry">Poetry</Link></li>

@@ -69,7 +69,7 @@ function Poetry() {
                             </Link>
                             <p className="archive-author">by {blogpost.Author}</p>
                             <p className="archive-excerpt">
-                                {blogpost.Text.substring(0, blogpost.Text.indexOf(".")) + "."}
+                                {blogpost.Text.substring(0, blogpost.Text.indexOf("\n")) + "..."}
                             </p>
                         </div>
                     </div>
