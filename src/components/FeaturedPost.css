@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;          /* Vertically center text next to image */
   justify-content: center;      /* Center the whole thing horizontally on the page */
-  gap: 0px;                    /* Big gap like the example */
+  gap: 30px;                    /* Big gap like the example */
   max-width: 1200px;        /* Keeps content nicely contained on wide screens */            
   margin-top: 400px;
   margin-left: 305px;
@@ -15,7 +15,7 @@
 }
 
 .featured-image img {
-  width: 800;                 /* Big, beautiful image */
+  width: 750;                 /* Big, beautiful image */
   height: auto;                 /* Maintain aspect ratio */
   object-fit: cover;            /* Crop neatly if needed */
 }
@@ -30,7 +30,7 @@
   font-family: 'Sabon';
   font-size: 2.5rem;            /* Large title like example */
   font-weight: 500;
-  color: #000;
+  color: #353434;
   margin-bottom: 0.5rem;
   padding: 0;
   text-decoration: underline;
@@ -40,7 +40,7 @@
 .featured-text .author {
   font-size: 1.8rem;            /* Author size in example */
   font-weight: 400;
-  color: #000;
+  color: #353535;
   margin-top: 0px;
 
 }
@@ -50,9 +50,9 @@
   line-height: 1.6;
   color: rgb(51, 51, 51);
   font-family: 'Sabon';
-  max-width: 300px;
+  max-width: 450px;
   text-align: center;
-  margin-left: 80px;
+  margin-left: 40px;
 }
 
  .read-more-title {

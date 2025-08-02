@@ -10,7 +10,7 @@ function RecentlyPublished({ posts }){
     return(
         <div className="recently-published">
             <hr className="top-recent-line" />
-            <p className="RecPubHeader">Recently Published</p>
+            <p className="RecPubHeader">RECENTLY PUBLISHED</p>
             <hr className="bottom-recent-line" />
             <div className="recent-grid">
                 {posts.map(post => (
