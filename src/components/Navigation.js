@@ -1,6 +1,11 @@
 import { React, useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navigation.css';
+import { CiInstagram } from "react-icons/ci";
+import { PiInstagramLogoLight } from "react-icons/pi";
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+
 
 function Navigation() {
 
@@ -28,11 +33,19 @@ function Navigation() {
                 transform: `translate(${ -10 * scrollProgress }px, ${ -10 * scrollProgress }px)`,
             }}>
                 {/*create clickable links that point to route paths defined in App.js*/} 
+                <ul className="social-links" style = {{marginRight: `${0 + 150 * scrollProgress}px`, marginTop: `-5px`}}>
+                    <a href="https://www.instagram.com/fledglingsmag/" className="insta-link">
+                        <PiInstagramLogoLight className="insta" /></a>
+                    <a href="https://www.instagram.com/fledglingsmag/" className="twitter-link">
+                        <FaTwitter className="twitter" /></a>
+                    <a href="https://www.instagram.com/fledglingsmag/" className="facebook-link">
+                        <FaFacebookF className="facebook"/></a>
+                </ul>
                 <p className="head" style={{
-                    fontSize: `${75 - 45 * scrollProgress}px`,
-                    marginRight: `${70 - 40 * scrollProgress}px`,
-                    transform: `translate(${ -150 * scrollProgress }px, ${ -105 * scrollProgress }px)`,
-                    fontFamily: 'BentonModDisplay',
+                    fontSize: `${90 - 50 * scrollProgress}px`,
+                    marginRight: `${30 - 40 * scrollProgress}px`,
+                    transform: `translate(${ -150 * scrollProgress }px, ${ -100 * scrollProgress }px)`,
+                    fontFamily: 'Sabon',
                 }}>fledglings</p>
                 <li><Link to="/fiction">Fiction</Link></li>
                 <li><Link to="/poetry">Poetry</Link></li>

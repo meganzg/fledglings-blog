@@ -8,13 +8,13 @@
   font-size: 3rem;
   text-align: center;
   font-family: 'Sabon', serif;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .recent-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); /* Responsive 3-column grid */
-  gap: 45px;
+  gap: 8px;
 }
 
 .recent-card {
@@ -24,7 +24,7 @@
 }
 
 .recent-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   background-color: #d3d2d2;
 }
 
@@ -45,7 +45,8 @@
 }
 
 .recent-card-text {
-  padding: 1.5rem 5px;
+  padding: 1rem 5px;
+  max-width: 350px
 }
 
 .recent-card-title {
@@ -62,4 +63,19 @@
   color: #666;
   font-family: 'Sabon', serif;
   line-height: 1.6;
+}
+
+.top-recent-line {
+  width: 100%;
+  margin-bottom: -30px;
+  margin-right: 100px;
+  max-width: 1220px
+}
+
+.bottom-recent-line {
+  width: 100%;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  margin-right: 100px;
+  max-width: 1220px
 }

@@ -14,11 +14,11 @@
   }
 
   .head {
-    font-size: 75px;
-    font-family: 'BentonModDisplay';
-    margin-right: 70px;
+    font-size: 90px;
+    font-family: 'Sabon';
+    margin-right: 50px;
     padding: 0rem;
-    margin-top: 100px;
+    margin-top: 90px;
     font-variant-ligatures: no-common-ligatures;
   }
   
@@ -93,6 +93,27 @@
     color: black;
   }
 
+  
+.insta{
+  color: black;
+  font-size: 30px;
+  margin-top: 5px;
+  margin-right: 0px;
+}
+.twitter{
+color: black;
+font-size: 30px;
+margin-top: 5px;
+margin-right: 0px;
+}
+.facebook{
+  color: black;
+  font-size: 25px;
+  margin-top: 7px;
+  margin-right: 300px;
+}
+
+
 /* Shrink state */
 .navigation.shrink {
   height: 100px;
@@ -111,5 +132,12 @@
 .navigation.shrink a {
   font-size: 16px;
 }
+
+.navigation.shrink .insta {
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+
 
 

@@ -8,8 +8,8 @@
   justify-content: center;      /* Center the whole thing horizontally on the page */
   gap: 0px;                    /* Big gap like the example */
   max-width: 1200px;        /* Keeps content nicely contained on wide screens */            
-  margin-top: 300px;
-  margin-left: 315px;
+  margin-top: 400px;
+  margin-left: 305px;
   background-color: white;
   padding: 0;
 }
