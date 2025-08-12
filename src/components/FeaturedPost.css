@@ -61,3 +61,25 @@
     text-decoration: none;
     font-size: 0.8rem;
   }
+
+/* ---- Mobile only adjustments; desktop unchanged ---- */
+@media (max-width: 768px) {
+  .featured-flex {
+    flex-direction: column;
+    gap: 16px;
+    margin: 100px 16px 24px 16px; /* remove huge desktop margins on mobile */
+    align-items: stretch;
+  }
+  .featured-image img {
+    width: 100% !important;
+    height: auto;
+    max-width: 100%;
+  }
+  .featured-text {
+    min-width: auto;
+    padding: 0 8px 16px 8px;
+  }
+  .featured-text h2 { font-size: 1.6rem; }
+  .featured-text .author { font-size: 1.1rem; }
+  .featured-text .excerpt { font-size: 1rem; margin-left: 0; max-width: 100%; }
+}

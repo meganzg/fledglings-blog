@@ -11,18 +11,18 @@
     background-color: #c7bcb7;
     text-align: center;
     justify-content: center;
-  }
+}
 
-  .head {
+.head {
     font-size: 90px;
     font-family: 'Sabon';
     margin-right: 50px;
     padding: 0rem;
     margin-top: 90px;
     font-variant-ligatures: no-common-ligatures;
-  }
-  
-  .navigation ul {
+}
+
+.navigation ul {
     list-style: none;
     font-family: 'BentonModDisplay';
     padding: 0rem;
@@ -31,18 +31,18 @@
     display: flex;
     justify-content: right;
     gap: 1.5rem;
-  }
-  
-  .navigation a {
+}
+
+.navigation a {
     color: black;
     text-decoration: none;
     font-size: 20px;
     text-align: right;
-  }
+}
 
-  .navigation a:hover {
+.navigation a:hover {
     color: #ddd;
-  }
+}
 
 .small-navigation {
     background-color: #c7bcb7;
@@ -57,30 +57,30 @@
     justify-items: right;
     z-index: 1000;
     height: 100px;
-  }
+}
 
-  .small-navigation ul {
+.small-navigation ul {
     margin-right: 70px;
     margin-top: 40px;
     list-style: none;
     display: flex;
     gap: 1.5rem;
-  }
+}
 
-  .small-navigation a {
+.small-navigation a {
     color: black;
     text-decoration: none;
     font-size: 20px;
-  }
-  
-  .small-navigation a:hover {
-    color: #ddd;
-  }
+}
 
-  .small-navigation a.active{
+.small-navigation a:hover {
+    color: #ddd;
+}
+
+.small-navigation a.active{
     text-decoration: underline;
     font-weight: bold;
-  }
+}
 
 .small-head {
     margin-left: 20px;
@@ -90,51 +90,47 @@
     text-align: left;
     font-family: 'BentonModDisplay';
     color: black;
-  }
-
-  
-.insta{
-  color: black;
-  font-size: 30px;
-  margin-top: 5px;
-  margin-right: 0px;
-}
-.twitter{
-color: black;
-font-size: 30px;
-margin-top: 5px;
-margin-right: 0px;
-}
-.facebook{
-  color: black;
-  font-size: 25px;
-  margin-top: 7px;
-  margin-right: 300px;
 }
 
+.insta{ color: black; font-size: 30px; margin-top: 5px; margin-right: 0px; }
+.twitter{ color: black; font-size: 30px; margin-top: 5px; margin-right: 0px; }
+.facebook{ color: black; font-size: 25px; margin-top: 7px; margin-right: 300px; }
 
 /* Shrink state */
-.navigation.shrink {
-  height: 100px;
-}
+.navigation.shrink { height: 100px; }
+.navigation.shrink .head { font-size: 30px; margin-right: 230px; margin-top: 0px; }
+.navigation.shrink ul { margin-top: 30; }
+.navigation.shrink a { font-size: 16px; }
+.navigation.shrink .insta { font-size: 20px; margin-right: 50px; }
 
-.navigation.shrink .head {
-  font-size: 30px;
-  margin-right: 230px;
-  margin-top: 0px;
-}
+/* --- Mobile only additions --- */
+.hamburger { display: none; background: none; border: none; padding: 8px; cursor: pointer; align-self: center; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #000; margin: 5px 0; }
+.desktop-only { display: inline-flex; }
 
-.navigation.shrink ul {
-  margin-top: 30;
-}
+.mobile-menu-overlay { display: none; }
 
-.navigation.shrink a {
-  font-size: 16px;
-}
+@media (max-width: 768px) {
+  .navigation { height: 70px; }
+  .navigation ul { margin-right: 12px; margin-top: 12px; align-items: center; }
+  .head { font-size: 28px; margin: 0 auto; order: 2; }
+  .insta, .twitter { font-size: 20px; }
+  .facebook { font-size: 18px; margin-right: 8px; }
 
-.navigation.shrink .insta {
-  font-size: 20px;
-  margin-right: 50px;
+  .desktop-only { display: none; }
+  .hamburger { display: inline-flex; order: 3; margin-left: auto; }
+
+  .mobile-menu-overlay { position: fixed; inset: 0; background: #c7bcb7; display: none; z-index: 2000; }
+  .mobile-menu-overlay.open { display: block; }
+  .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-bottom: 1px solid #b3a9a4; }
+  .mobile-brand { font-family: 'Sabon'; font-size: 24px; }
+  .mobile-close { background: none; border: none; font-size: 28px; cursor: pointer; }
+  .mobile-menu-list { list-style: none; padding: 32px 24px; margin: 0; display: grid; gap: 16px; text-align: center; }
+  .mobile-menu-list a { color: #000; text-decoration: none; font-size: 22px; font-family: 'BentonModDisplay'; }
+
+  .small-navigation { height: 70px; }
+  .small-navigation ul { margin-right: 12px; margin-top: 12px; align-items: center; }
+  .small-head { margin: 0; font-size: 24px; }
 }
 
 
