@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Navigation.css';
 import { PiInstagramLogoLight } from "react-icons/pi";
 import { FaTwitter } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
+import { FaTumblr } from "react-icons/fa";
 
 function Navigation() {
     const location = useLocation();
@@ -54,8 +54,8 @@ function Navigation() {
                     <a href="https://twitter.com/" className="twitter-link" aria-label="Twitter">
                         <FaTwitter className="twitter" />
                     </a>
-                    <a href="https://facebook.com/" className="facebook-link" aria-label="Facebook">
-                        <FaFacebookF className="facebook" />
+                    <a href="https://www.tumblr.com/" className="tumblr-link" aria-label="Tumblr">
+                        <FaTumblr className="tumblr" />
                     </a>
                 </ul>
                 <p
