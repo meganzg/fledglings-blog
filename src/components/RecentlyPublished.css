@@ -79,3 +79,93 @@
   margin-right: 100px;
   max-width: 1220px
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .recently-published {
+    padding: 2rem 1.5rem;
+  }
+  
+  .RecPubHeader {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .recent-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 3rem;
+    max-width: 400px; /* Limit width for symmetry */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  .recent-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .recent-card-image {
+    width: 100%;
+    height: 250px; /* Consistent height for all mobile images */
+    object-fit: cover;
+    display: block;
+  }
+  
+  .recent-card-text {
+    padding: 1.5rem 1rem;
+    max-width: none; /* Remove width restriction */
+    text-align: center; /* Center text on mobile */
+  }
+  
+  .recent-card-title {
+    font-size: 1.3rem;
+    text-align: center; /* Center title */
+    margin-bottom: 1rem;
+  }
+  
+  .recent-card-excerpt {
+    font-size: 0.95rem;
+    text-align: center; /* Center excerpt */
+    max-width: 300px;
+    margin: 0 auto; /* Center the text block */
+  }
+  
+  .top-recent-line, 
+  .bottom-recent-line {
+    max-width: 300px; /* Make lines shorter on mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .recently-published {
+    padding: 1.5rem 1rem;
+  }
+  
+  .RecPubHeader {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .recent-grid {
+    max-width: 350px; /* Slightly wider for very small screens */
+    gap: 2.5rem;
+  }
+  
+  .recent-card-image {
+    height: 220px; /* Slightly smaller for very small screens */
+  }
+  
+  .recent-card-title {
+    font-size: 1.2rem;
+  }
+  
+  .recent-card-excerpt {
+    font-size: 0.9rem;
+  }
+  
+  .top-recent-line, 
+  .bottom-recent-line {
+    max-width: 250px; /* Even shorter lines for small phones */
+  }
+}

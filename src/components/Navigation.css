@@ -116,10 +116,10 @@
   .navigation ul { margin-right: 12px; margin-top: 16px; align-items: center; }
 
   /* Align social links and icons together */
-  .social-links { display: flex; align-items: center; gap: 12px; }
-  .insta-link, .twitter-link, .tumblr-link { display: inline-flex; align-items: center; justify-content: center; padding: 0; margin: 0; transform: translateY(4px); }
-  .insta, .twitter, .tumblr { transform: none; }
-
+  .social-links { display: flex; align-items: center; gap: 12px; margin-right: 10px; margin-left: 10px;}
+  .insta-link, .twitter-link, .tumblr-link { display: inline-flex; align-items: center; justify-content: center; padding: 0; margin: 0; transform: translateY(4px); width: 20px; height: 20px;}
+  .insta, .twitter, .tumblr { transform: none; width: 20px; height: 20px;}
+  .tumblr-link { width: 35px;}
   .head { font-size: 28px; margin: 0 auto; order: 2; transform: translateY(4px); }
 
   .desktop-only { display: none; }

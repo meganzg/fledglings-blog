@@ -20,11 +20,7 @@ function RecentlyPublished({ posts }){
                         className="recent-card-image"
                         src={post.Media.url} 
                         alt={post.Title} 
-                        style={{ 
-                            width: '381px', 
-                            height: '405px', 
-                            objectFit: 'cover', 
-                        }}
+                        // Removed inline styles - now handled by CSS
                     />
                     <div className="recent-card-text">
                         <p className="recent-card-title"><u className="homeTitle">{post.Title}</u> by {post.Author}</p>
