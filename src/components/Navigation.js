@@ -55,15 +55,9 @@ function Navigation() {
                     <a href="https://twitter.com/" className="twitter-link" aria-label="Twitter">
                         <FaTwitter className="twitter" />
                     </a>
-                    {isMobile ? (
-                        <a href="https://www.tumblr.com/" className="tumblr-link" aria-label="Tumblr">
+                    <a href="https://www.tumblr.com/" className="tumblr-link" aria-label="Tumblr">
                             <FaTumblr className="tumblr" />
-                        </a>
-                    ) : (
-                        <a href="https://facebook.com/" className="facebook-link" aria-label="Facebook">
-                            <FaFacebookF className="facebook" />
-                        </a>
-                    )}
+                    </a>
                 </ul>
                 <p
                     className="head"

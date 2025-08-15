@@ -105,7 +105,7 @@
   
   .recent-card-image {
     width: 100%;
-    height: 250px; /* Consistent height for all mobile images */
+    height: 350px; /* Consistent height for all mobile images */
     object-fit: cover;
     display: block;
   }

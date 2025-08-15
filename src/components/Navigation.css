@@ -92,9 +92,8 @@
     color: black;
 }
 
-.insta{ color: black; font-size: 30px; margin-top: 5px; margin-right: 0px; }
+.insta { color: black; font-size: 30px; margin-top: 5px; margin-right: 0px; }
 .twitter{ color: black; font-size: 30px; margin-top: 5px; margin-right: 0px; }
-.facebook{ color: black; font-size: 25px; margin-top: 7px; margin-right: 300px; }
 .tumblr{ color: black; font-size: 25px; margin-top: 7px; margin-right: 300px; }
 
 /* Shrink state */
@@ -105,40 +104,64 @@
 .navigation.shrink .insta { font-size: 20px; margin-right: 50px; }
 
 /* --- Mobile only additions --- */
-.hamburger { display: none; background: none; border: none; padding: 8px; cursor: pointer; align-self: center; }
-.hamburger span { display: block; width: 24px; height: 2px; background: #000; margin: 5px 0; }
+.hamburger { 
+    display: none; 
+    background: none; 
+    border: none; 
+    padding: 8px; 
+    cursor: pointer; 
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+.hamburger span { 
+    display: block; 
+    width: 15px; 
+    height: 2px; 
+    background: #000; 
+    margin: 5px 0; 
+}
 .desktop-only { display: inline-flex; }
 
-.mobile-menu-overlay { display: none; }
+.mobile-menu-overlay { 
+  position: fixed;
+  inset: 0;
+  background: #c7bcb7;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
 
 @media (max-width: 768px) {
   .navigation { height: 70px; }
   .navigation ul { margin-right: 12px; margin-top: 16px; align-items: center; }
 
   /* Align social links and icons together */
-  .social-links { display: flex; align-items: center; gap: 12px; margin-right: 10px; margin-left: 10px;}
+  .social-links { display: flex; align-items: center; gap: 0px; margin-right: 10px; margin-left: 20px; margin-bottom: 10px;}
+  .insta, .twitter { transform: none; width: 20px; height: 20px; margin-bottom: 0px;}
+  .tumblr { transform: none; width: 20px; height: 20px; margin-right: 0px; margin-bottom: 2px;}
   .insta-link, .twitter-link, .tumblr-link { display: inline-flex; align-items: center; justify-content: center; padding: 0; margin: 0; transform: translateY(4px); width: 20px; height: 20px;}
-  .insta, .twitter, .tumblr { transform: none; width: 20px; height: 20px;}
-  .tumblr-link { width: 35px;}
   .head { font-size: 28px; margin: 0 auto; order: 2; transform: translateY(4px); }
 
   .desktop-only { display: none; }
-  .hamburger { display: inline-flex; order: 3; margin-left: 8px; }
-  .hamburger span { width: 26px; height: 2px; margin: 4px 0; }
+  .hamburger { display: inline-flex; flex-direction: column; order: 3; margin-left: 8px; }
+  .hamburger span { width: 35px; height: 2px; margin: 4px 0; }
 
   .mobile-menu-overlay { position: fixed; inset: 0; background: #c7bcb7; display: none; z-index: 2000; }
-  .mobile-menu-overlay.open { display: block; }
+  .mobile-menu-overlay.open { 
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: block; 
+   }
   .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-bottom: 1px solid #b3a9a4; }
   .mobile-brand { font-family: 'Sabon'; font-size: 24px; }
   .mobile-close { background: none; border: none; font-size: 28px; cursor: pointer; }
-  .mobile-menu-list { list-style: none; padding: 32px 24px; margin: 0; display: grid; gap: 16px; text-align: center; }
-  .mobile-menu-list a { color: #000; text-decoration: none; font-size: 22px; font-family: 'BentonModDisplay'; }
+  .mobile-menu-list { display: inline-flex; flex-direction: column; text-align: center; }
+  .mobile-menu-list a { color: #000; text-decoration: none; font-size: 22px; font-family: 'BentonModDisplay';}
 
   .small-navigation { height: 70px; }
   .small-navigation ul { margin-right: 12px; margin-top: 12px; align-items: center; }
   .small-head { margin: 0; font-size: 24px; }
 }
-
-
-
 
