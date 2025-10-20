@@ -16,8 +16,6 @@ function FeaturedPost({ post }) {
                             src={post.Media.url} 
                             alt="Blog Post Image"
                             style={{ 
-                            width: '770px', 
-                            height: '530px', 
                             objectFit: 'cover', 
                         }}  
                         />

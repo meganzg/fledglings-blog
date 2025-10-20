@@ -70,12 +70,12 @@ function Navigation() {
                 >
                     fledglings
                 </p>
-                <li className="desktop-only"><Link to="/fiction">Fiction</Link></li>
-                <li className="desktop-only"><Link to="/poetry">Poetry</Link></li>
-                <li className="desktop-only"><Link to="/nonfiction">Nonfiction</Link></li>
-                <li className="desktop-only"><Link to="/art">Art</Link></li>
-                <li className="desktop-only"><Link to="/Submit">Submit</Link></li>
-                <li className="desktop-only"><Link to="/About">About</Link></li>
+                <li className="desktop-only"><Link to="/fiction">fiction</Link></li>
+                <li className="desktop-only"><Link to="/poetry">poetry</Link></li>
+                <li className="desktop-only"><Link to="/nonfiction">nonfiction</Link></li>
+                <li className="desktop-only"><Link to="/art">art</Link></li>
+                <li className="desktop-only"><Link to="/Submit">submit</Link></li>
+                <li className="desktop-only"><Link to="/About">about</Link></li>
 
                 {/* Mobile hamburger */}
                 <button className="hamburger" onClick={toggleMenu} aria-label="Open menu">
@@ -92,12 +92,12 @@ function Navigation() {
                     <button className="mobile-close" onClick={closeMenu} aria-label="Close menu">×</button>
                 </div>
                 <ul className="mobile-menu-list" onClick={closeMenu}>
-                    <li><Link to="/fiction">Fiction</Link></li>
-                    <li><Link to="/poetry">Poetry</Link></li>
-                    <li><Link to="/nonfiction">Nonfiction</Link></li>
-                    <li><Link to="/art">Art</Link></li>
-                    <li><Link to="/Submit">Submit</Link></li>
-                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/fiction">fiction</Link></li>
+                    <li><Link to="/poetry">poetry</Link></li>
+                    <li><Link to="/nonfiction">nonfiction</Link></li>
+                    <li><Link to="/art">art</Link></li>
+                    <li><Link to="/Submit">submit</Link></li>
+                    <li><Link to="/About">about</Link></li>
                 </ul>
             </div>
         </nav>
@@ -105,12 +105,12 @@ function Navigation() {
         <nav className="small-navigation">
             <ul>
                 <li><Link to="/"><p className="small-head">fledglings</p></Link></li>
-                <li className="desktop-only"><Link to="/fiction">Fiction</Link></li>
-                <li className="desktop-only"><Link to="/poetry">Poetry</Link></li>
-                <li className="desktop-only"><Link to="/nonfiction">Nonfiction</Link></li>
-                <li className="desktop-only"><Link to="/art">Art</Link></li>
-                <li className="desktop-only"><Link to="/Submit">Submit</Link></li>
-                <li className="desktop-only"><Link to="/About">About</Link></li>
+                <li className="desktop-only"><Link to="/fiction">fiction</Link></li>
+                <li className="desktop-only"><Link to="/poetry">poetry</Link></li>
+                <li className="desktop-only"><Link to="/nonfiction">nonfiction</Link></li>
+                <li className="desktop-only"><Link to="/art">art</Link></li>
+                <li className="desktop-only"><Link to="/Submit">submit</Link></li>
+                <li className="desktop-only"><Link to="/About">about</Link></li>
                 <button className="hamburger" onClick={toggleMenu} aria-label="Open menu">
                     <span></span><span></span><span></span>
                 </button>
@@ -121,12 +121,12 @@ function Navigation() {
                     <button className="mobile-close" onClick={closeMenu} aria-label="Close menu">×</button>
                 </div>
                 <ul className="mobile-menu-list" onClick={closeMenu}>
-                    <li><Link to="/fiction">Fiction</Link></li>
-                    <li><Link to="/poetry">Poetry</Link></li>
-                    <li><Link to="/nonfiction">Nonfiction</Link></li>
-                    <li><Link to="/art">Art</Link></li>
-                    <li><Link to="/Submit">Submit</Link></li>
-                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/fiction">fiction</Link></li>
+                    <li><Link to="/poetry">poetry</Link></li>
+                    <li><Link to="/nonfiction">nonfiction</Link></li>
+                    <li><Link to="/art">art</Link></li>
+                    <li><Link to="/Submit">submit</Link></li>
+                    <li><Link to="/About">about</Link></li>
                 </ul>
             </div>
         </nav>

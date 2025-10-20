@@ -1,95 +1,106 @@
+/* =========================
+   POETRY.css
+   Desktop: your current styles
+   Mobile: same layout as Fiction mock
+   ========================= */
 
-.MainReadHeader {
-    margin-top: 170px;
-    font-size: 40px;
-}
+/* Page header + divider */
+.MainReadHeader { margin-top: 170px; font-size: 40px; }
+.my-divider { max-width: 1100px; }
 
-.my-divider {
-    max-width: 1100px;
-}
-
-.read-more {
-    color: white;
-    background-color: white;
-}
-
+/* Section labels */
 .archive {
-    font-family: 'Sabon';
-    font-size: 40px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+  font-family: 'Sabon';
+  font-size: 40px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
+/* Archive (desktop) */
 .archive-container {
   display: flex;
   flex-direction: column;
   gap: 40px;
   max-width: 1000px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 50px auto 0;
 }
-
 .archive-card {
   display: flex;
   gap: 30px;
   align-items: flex-start;
   margin-bottom: 200px;
 }
-
 .archive-image {
   width: 350px;
   height: 250px;
   object-fit: cover;
 }
+.archive-text { flex: 1; display: flex; flex-direction: column; }
+.archive-title-link { text-decoration: none; color: black; }
+.archive-title { font-family: 'Sabon', serif; font-size: 20px; margin: 0; text-align: left; }
+.archive-author { font-family: 'Sabon', serif; font-size: 16px; margin: 5px 0 15px; text-align: left; }
+.archive-excerpt { font-family: 'Georgia', serif; font-size: 16px; color: #555; text-align: left; }
 
-.archive-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+/* ===== Optional: if Poetry page also uses the same Featured block classes =====
+   (If not, you can remove this section.)
+-------------------------------------------------------------------------------*/
+.featured-posts-container { display: flex; gap: 30px; margin: 60px auto 40px; max-width: 1000px; height: 500px; }
+.featured-left { flex: 2; position: relative; height: 100%; }
+.featured-right { flex: 1; display: flex; flex-direction: column; gap: 30px; }
+.featured-post-link { text-decoration: none; color: black; position: relative; display: block; height: 100%; width: 100%; }
+.featured-left-image, .featured-right-image { width: 100%; height: 100%; object-fit: cover; }
+.featured-right-image { height: 233px; }
+.fiction-title, .fiction-author { position: absolute; left: 15px; margin: 0; z-index: 2; opacity: 0; transition: opacity .3s ease; color: black; }
+.fiction-title { bottom: 40px; font-size: 20px; font-weight: 600; }
+.fiction-author { bottom: 20px; font-size: 14px; }
+.featured-post-link::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,.8); opacity: 0; transition: opacity .3s ease; z-index: 1; }
+.featured-post-link:hover::before { opacity: 1; }
+.featured-post-link:hover .fiction-title, .featured-post-link:hover .fiction-author { opacity: 1; }
 
-.archive-title-link {
-  text-decoration: none;
-  color: black;
-}
-
-.archive-title {
-  font-family: 'Sabon', serif;
-  font-size: 20px;
-  margin: 0;
-  text-align: left;
-
-}
-
-.archive-author {
-  font-family: 'Sabon', serif;
-  font-size: 16px;
-  margin: 5px 0 15px;
-  text-align: left;
-
-}
-
-.archive-excerpt {
-  font-family: 'Georgia', serif;
-  font-size: 16px;
-  color: #555;
-  text-align: left;
-
-}
-
-/* Responsive layout: stack on mobile */
+/* =========================
+   MOBILE ≤ 768px
+   ========================= */
 @media (max-width: 768px) {
-  .archive-card {
+  /* Featured: big hero + two small thumbs */
+  .featured-posts-container {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .archive-image {
-    width: 100%;
+    gap: 20px;
     height: auto;
+    max-width: 360px;
+    margin: 24px auto 28px;
   }
+  .featured-left { flex: none; position: relative; height: auto; }
+  .featured-left-image { width: 100%; height: 190px; object-fit: cover; display: block; }
+  .featured-right { flex: none; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .featured-right-image { width: 100%; height: 90px; object-fit: cover; display: block; }
 
-  .archive-text {
-    text-align: left;
+  /* Hide desktop overlays on mobile */
+  .featured-post-link::before, .fiction-title, .fiction-author { display: none !important; }
+
+  /* Archive heading */
+  .archive { font-size: 24px; margin: 12px 0 8px; }
+
+  /* Archive: centered, stacked cards */
+  .archive-container {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 28px; max-width: 360px; margin: 0 auto 48px;
   }
+  .archive-card {
+    width: 260px; margin-bottom: 0;
+    flex-direction: column; align-items: center; text-align: center;
+  }
+  .archive-image {
+    width: 145px; height: 105px; object-fit: cover; display: block; margin: 0 auto 6px;
+  }
+  .archive-title { font-size: 18px; margin: 4px 0 2px; text-align: center; }
+  .archive-author { font-size: 14px; margin-bottom: 6px; text-align: center; }
+  .archive-excerpt { font-size: 14px; line-height: 1.6; max-width: 260px; margin: 0 auto; text-align: center; color: #555; }
 }
+
+/* Tiny phones */
+@media (max-width: 360px) {
+  .archive-container, .featured-posts-container { max-width: 320px; }
+  .archive-card { width: 240px; }
+  .archive-excerpt { max-width: 240px; }
+}
+

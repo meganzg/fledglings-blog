@@ -1,39 +1,70 @@
+/* =========================
+   FEATURED POST (Updated)
+   Goal: Image matches text column height and is slightly larger overall.
+   Based on your existing styles with minimal changes.
+   ========================= */
+
+/* Wrapper */
 .featured-post {
-  color: white;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-width: 300px;
+  width: min(100%, 1350px);      /* Limit width */
   max-width: 100%;
+  margin: 400px auto 0;          /* Center + keep your top spacing */
+  padding: clamp(12px, 2vw, 24px);
+  color: white;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;           /* keep centering */
+  justify-content: center;
 }
+
+/* Row layout */
 .featured-flex {
   display: flex;
-  align-items: center;          /* Vertically center text next to image */
-  justify-content: center;      /* Center the whole thing horizontally on the page */
-  gap: 30px;                    /* Big gap like the example */
-  max-width: 1200px;        /* Keeps content nicely contained on wide screens */            
-  margin-top: 400px;
-  margin-left: 305px;
-  background-color: white;
-  padding: 0;
-  
+  padding: 3rem;
+  flex-direction: row;           /* side-by-side */
+  justify-content: center;
+  gap: 36px;                     /* slightly more air than 30px */
+  align-items: stretch;          /* make both columns equal height */
+  min-height: clamp(440px, 42vw, 300px);  /* drives BOTH columns’ height */
 }
 
-.featured-image img {
-  width: 750;                 /* Big, beautiful image */
-  height: auto;                 /* Maintain aspect ratio */
-  object-fit: cover;            /* Crop neatly if needed */
-}
-
+/* Columns */
+.featured-image,
 .featured-text {
-  min-width: 450px;          /* Limit text width for readability */
-  text-align: center;
   background-color: white;
+  width: 100%;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
+/* Image column fills the row height exactly */
+.featured-image {
+  display: flex;                 /* enables child to take full height */
+  flex: 1.25 1 0;
+}
+
+.featured-image a,
+.featured-image img {
+  display: block;
+  width: 100%;
+  height: 100%;                  /* match text column height */
+  object-fit: cover;             /* fill without distortion; crop if needed */
+  object-position: center;
+}
+
+/* Text column vertically centered in the taller row */
+.featured-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* vertical centering */
+  flex: 0.75 1 0;
+}
+
+/* Typography */
 .featured-text h2 {
   font-family: 'Sabon';
-  font-size: 2.5rem;            /* Large title like example */
+  font-size: 2.7rem;             /* nudged up from 2.5rem to balance bigger image */
   font-weight: 500;
   color: #353434;
   margin-bottom: 0.5rem;
@@ -43,15 +74,14 @@
 }
 
 .featured-text .author {
-  font-size: 1.8rem;            /* Author size in example */
+  font-size: 1.9rem;             /* slight bump */
   font-weight: 400;
   color: #353535;
-  margin-top: 0px;
-
+  margin-top: 0;
 }
 
 .featured-text .excerpt {
-  font-size: 1.2rem;            /* Body text size */              
+  font-size: 1.22rem;            /* slight bump */
   line-height: 1.6;
   color: rgb(51, 51, 51);
   font-family: 'Sabon';
@@ -60,31 +90,43 @@
   margin-left: 40px;
 }
 
- .read-more-title {
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    font-size: 0.8rem;
-  }
+.read-more-title {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
 
 /* ---- Mobile only adjustments; desktop unchanged ---- */
 @media (max-width: 768px) {
   .featured-flex {
     flex-direction: column;
     gap: 16px;
-    margin: 100px 16px 24px 16px; /* remove huge desktop margins on mobile */
+    margin: 10px 16px 24px 16px; /* remove huge desktop margins on mobile */
     align-items: stretch;
+    padding: 1rem;             /* slightly less padding on phones */
+    min-height: unset;            /* let content define height on mobile */
   }
+
+  .featured-image {
+    display: block;               /* reset */
+  }
+
   .featured-image img {
     width: 100% !important;
-    height: auto;
+    height: auto;                 /* natural responsive image on mobile */
     max-width: 100%;
+    object-fit: cover;
   }
+
   .featured-text {
     min-width: auto;
     padding: 0 8px 16px 8px;
+    justify-content: flex-start;  /* normal flow on mobile */
   }
+
   .featured-text h2 { font-size: 1.6rem; }
   .featured-text .author { font-size: 1.1rem; }
   .featured-text .excerpt { font-size: 1rem; margin-left: 0; max-width: 100%; }
 }
+

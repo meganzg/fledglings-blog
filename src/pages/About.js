@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
-import './Art.css';
-
+import './About.css';
 
 function About() {
     return (

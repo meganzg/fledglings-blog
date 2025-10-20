@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer';
-
+import './Submit.css';
 
 function Submit() {
     return (

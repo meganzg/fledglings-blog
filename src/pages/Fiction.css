@@ -1,125 +1,247 @@
+/* ===========================
+   FICTION — Desktop (yours)
+   =========================== */
+
 .featured-posts-container {
-    display: flex;
-    gap: 30px;
-    margin: 40px auto;
-    max-width: 1000px;
-    height: 500px;
-    margin-top: 60px;
+  display: flex;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  height: 500px;
+  margin-top: 60px;
 }
 
 .featured-left {
-    flex: 2;
-    position: relative;
-    height: 100%;
+  flex: 2;
+  position: relative;
+  height: 100%;
 }
 
 .featured-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .featured-post-link {
-    text-decoration: none;
-    color: black;
-    position: relative;
-    display: block;
-    height: 100%;
-    width: 100%
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
-.featured-left-image, .featured-right-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.featured-left-image {
-
-}
-
+.featured-left-image,
 .featured-right-image {
-    height: 233px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Title and author overlay styling */
+.featured-right-image { height: 233px; }
+
+/* Overlay text (desktop only) */
 .fiction-title {
-    position: absolute;
-    bottom: 40px;
-    left: 15px;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .fiction-author {
-    position: absolute;
-    bottom: 20px;
-    left: 15px;
-    color: black;
-    font-size: 14px;
-    margin: 0;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: black;
+  font-size: 14px;
+  margin: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Add overlay for better text readability */
+/* Readability overlay (desktop only) */
 .featured-post-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.8);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
-/* Hover effects */
-.featured-post-link:hover::before {
-    opacity: 1;
-}
-
+.featured-post-link:hover::before { opacity: 1; }
 .featured-post-link:hover .fiction-title,
-.featured-post-link:hover .fiction-author {
-    opacity: 1;
+.featured-post-link:hover .fiction-author { opacity: 1; }
+
+/* ----- Archive (desktop) ----- */
+.archive { 
+  font-family: 'Sabon';
+  font-size: 28px; 
+  text-align: center; 
+  margin: 40px 0 10px; 
 }
 
-/* Responsive behavior */
+.archive-container {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.archive-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.archive-image { width: 100%; height: 200px; object-fit: cover; display: block; }
+
+.archive-text { text-align: left; }
+
+.archive-title {
+  font-family: 'Sabon';
+  font-weight: 500;
+  font-size: 20px;
+  margin: 4px 0 2px 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  color: #222;
+}
+
+.archive-author {
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 6px 0;
+}
+
+.archive-excerpt {
+  font-family: 'Sabon';
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+/* ===========================
+   MOBILE (≤ 768px)
+   Match your screenshot:
+   - Big hero image full width
+   - Two small thumbs side-by-side
+   - Archive: stacked, centered
+   =========================== */
 @media (max-width: 768px) {
-    .featured-posts-container {
-        flex-direction: column;
-        height: auto;
-    }
+  /* Container becomes single column */
+  .featured-posts-container {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    max-width: 360px;         /* narrow, elegant column */
+    margin: 24px auto 28px;
+  }
 
-    .featured-left, .featured-right {
-        flex: none;
-    }
+  /* Big hero image */
+  .featured-left {
+    flex: none;
+    position: relative;
+    height: auto;
+  }
+  .featured-left-image {
+    width: 100%;
+    height: 190px;            /* similar to your mock */
+    object-fit: cover;
+    display: block;
+  }
 
-    .featured-left-image {
-        height: 300px;
-    }
+  /* Two thumbnails side-by-side */
+  .featured-right {
+    flex: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .featured-right-image {
+    width: 100%;
+    height: 90px;             /* small thumbs */
+    object-fit: cover;
+    display: block;
+  }
 
-    .featured-right-image {
-        height: 200px;
-    }
+  /* Hide desktop hover overlays on mobile */
+  .featured-post-link::before,
+  .fiction-title,
+  .fiction-author {
+    display: none !important;
+  }
 
-    .fiction-title {
-        font-size: 20px;
-        bottom: 50px;
-    }
+  /* Archive header spacing like screenshot */
+  .archive {
+    font-size: 24px;
+    margin: 12px 0 8px;
+  }
 
-    .fiction-author {
-        font-size: 14px;
-        bottom: 25px;
-    }
+  /* Archive stack — centered slim cards */
+  .archive-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    max-width: 360px;
+    margin: 0 auto 48px;
+  }
+
+  .archive-card {
+    width: 260px;                 /* fixed, centered card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;           /* center all text */
+  }
+
+  .archive-image {
+    width: 145px;                 /* small centered image */
+    height: 105px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 6px;
+  }
+
+  .archive-title {
+    font-size: 18px;
+    margin: 4px 0 2px 0;
+  }
+  .archive-author {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .archive-excerpt {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 260px;
+    margin: 0 auto;
+    color: #555;
+  }
+}
+
+/* ===========================
+   SMALL PHONES (≤ 360px)
+   Tighten just a hair
+   =========================== */
+@media (max-width: 360px) {
+  .featured-posts-container,
+  .archive-container { max-width: 320px; }
+
+  .archive-card { width: 240px; }
+  .archive-excerpt { max-width: 240px; }
 }
