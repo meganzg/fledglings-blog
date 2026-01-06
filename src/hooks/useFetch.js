@@ -7,9 +7,6 @@ const useFetch = (url) => {
 
     useEffect(() => {
         const fetchData = async () => {
-
-            console.log('Token from env:', process.env.REACT_APP_STRAPI_API_TOKEN);
-
             setLoading(true)
 
             try {
@@ -20,12 +17,23 @@ const useFetch = (url) => {
                         'Authorization': `Bearer ${process.env.REACT_APP_STRAPI_API_TOKEN}`,
                     },
                 });
-                const json = await response.json()
+                let json;
+                try {
+                    json = await response.json();
+                } catch {
+                    throw new Error(`Non-JSON response. HTTP ${response.status}`);
+                }
 
                 console.log('Full API response:', json);
                 console.log('HTTP Status:', response.status);
 
-                setData(json.data)
+                if (!response.ok) {
+                    // Strapi usually returns { error: {...} }
+                    const msg = json?.error?.message || `Request failed: HTTP ${response.status}`;
+                    throw new Error(msg);
+                }
+
+                setData(json?.data ?? []);
                 console.log('API response', json.data);
                 setLoading(false)
             } catch (error) {
